@@ -2,7 +2,7 @@
 
 
 
-from .locators import Footer, Header, Service
+from .locators import Company, Footer, Header, Service
 from selenium.webdriver.common.keys import Keys 
 from .base_page import BasePage
 from selenium.webdriver.common.by import By
@@ -59,6 +59,41 @@ class MainPage(BasePage):
         except (NoSuchElementException):
             return False
         return True
+
+    def clear_and_write_form(self, how, what, data):
+        try:
+            self.data = data
+            all_buttons = self.browser.find_element(how, what)
+            actions = ActionChains(self.browser)
+            actions.move_to_element(all_buttons)
+            actions.perform()
+            all_buttons.send_keys(Keys.CONTROL + "a")
+            all_buttons.send_keys("\b")
+            all_buttons.send_keys(data)
+             ##("\b\b\b\b\b\b")
+             # page.input_form(*Company.COMPANY_CUSTOMERS_EDIT_NAME, Keys.DELETE)
+            time.sleep(2)
+        except (NoSuchElementException):
+            return False
+        return True
+
+    def clear_form(self, how, what):
+        try:
+            
+            all_buttons = self.browser.find_element(how, what)
+            actions = ActionChains(self.browser)
+            actions.move_to_element(all_buttons)
+            actions.perform()
+            all_buttons.send_keys(Keys.CONTROL + "a")
+            all_buttons.send_keys("\b")
+            
+             ##("\b\b\b\b\b\b")
+             # page.input_form(*Company.COMPANY_CUSTOMERS_EDIT_NAME, Keys.DELETE)
+            time.sleep(2)
+        except (NoSuchElementException):
+            return False
+        return True
+
 
     def send_file(self, how, what,data):
         try:
@@ -201,6 +236,112 @@ class MainPage(BasePage):
         token = "app_token"
         self.input_form(*Service.TOKEN, token)
         self.button_click(*Service.TOKEN_SUBMIT)
+
+    def entry_to_company(self):
+        
+        self.button_click(*Header.HEADER_ENTRY)
+        self.button_click(*Header.HEADER_ENTRY_FOR_COMPANY)
+        self.input_form(*Header.HEADER_ALERT_PHONE, 679887888)
+        self.input_form(*Header.HEADER_ALERT_PASSWORD, 12345678)
+        self.button_click(*Header.HEADER_ALERT_BUTTON)
+        time.sleep(3)
+        assert "company/map/" in self.browser.current_url , f"link isn't equal "
+
+    def entry_to_customer(self):
+        
+        self.button_click(*Header.HEADER_ENTRY)
+        self.button_click(*Header.HEADER_ENTRY_FOR_CUSTOMER)
+        self.input_form(*Header.HEADER_ALERT_EMAIL, "test1@m.com")
+        self.input_form(*Header.HEADER_ALERT_PASSWORD_CUSTOMER, 12345)
+        self.button_click(*Header.HEADER_ALERT_BUTTON_CUSTOMER)
+        time.sleep(3)
+        assert "cabinet/orders" in self.browser.current_url , f"link isn't equal "
+
+    def order_in_process (self):
+        text = self.browser.find_element(*Company.COMPANY_ORDERS_IN_PROCESS)
+        text = text.text
+        print (text)
+        number = self.browser.find_element(*Company.COMPANY_ORDERS_IN_PROCESS_NUMBER)
+        number = int(number.text)
+        print (number)
+        if number != 0:
+               
+                text = self.browser.find_element(*Company.COMPANY_ORDERS_IN_PROCESS_ORDER)
+                text = text.text
+                assert "В роботі" in text , f"link isn't equal "
+                self.button_click(*Company.COMPANY_ORDER) 
+                assert "driver/company/orders/order/" in self.browser.current_url , f"link isn't equal "
+                self.button_click(*Company.COMPANY_ORDER_BACK)
+                
+        else:
+            
+            text = self.browser.find_element(*Company.COMPANY_NO_ORDERS)
+            text = text.text
+            assert "Тут знаходяться замовлення, отримані" in text , f"link isn't equal "
+
+    def order_done (self):
+        text = self.browser.find_element(*Company.COMPANY_ORDERS_DONE)
+        text = text.text
+        assert "Виконані:" in text , f"link isn't equal " 
+        number = self.browser.find_element(*Company.COMPANY_ORDERS_DONE_ORDER_NUMBER)
+        number = int(number.text)
+        print (number)
+        if number != 0:
+                self.button_click(*Company.COMPANY_ORDERS_DONE)
+                text = self.browser.find_element(*Company.COMPANY_ORDERS_DONE_ORDER)
+                text = text.text
+                assert "Виконано" in text , f"link isn't equal "
+                self.button_click(*Company.COMPANY_ORDER) 
+                assert "driver/company/orders/order/" in self.browser.current_url , f"link isn't equal "
+                self.button_click(*Company.COMPANY_ORDER_BACK)
+                
+        else:
+            
+            text = self.browser.find_element(*Company.COMPANY_NO_ORDERS)
+            text = text.text
+            assert "Тут знаходяться замовлення, отримані" in text , f"link isn't equal "
+
+    def order_cancel (self):
+        text = self.browser.find_element(*Company.COMPANY_ORDERS_CANCELED)
+        text = text.text
+        assert "Скасовані" in text , f"link isn't equal " 
+        number = self.browser.find_element(*Company.COMPANY_ORDERS_CANCELED_ORDER_NUMBER)
+        number = int(number.text)
+        print (number)
+        if number != 0:###### NEED TO FIX
+                self.button_click(*Company.COMPANY_ORDERS_CANCELED)
+                assert "driver/company/orders/order/" in self.browser.current_url , f"link isn't equal "
+                self.button_click(*Company.COMPANY_ORDER_BACK)
+                
+        else:
+            self.button_click(*Company.COMPANY_ORDERS_CANCELED)
+            text = self.browser.find_element(*Company.COMPANY_NO_ORDERS)
+            text = text.text
+            assert "Немає замовлень" in text , f"link isn't equal "
+
+    def order_offers (self):
+        text = self.browser.find_element(*Company.COMPANY_ORDERS_OFFERS)
+        text = text.text
+        assert "Пропозиції замовлень:" in text , f"link isn't equal " 
+        number = self.browser.find_element(*Company.COMPANY_ORDERS_OFFERS_NUMBER)
+        number = int(number.text)
+        print (number)
+        if number != 0:
+                self.button_click(*Company.COMPANY_ORDERS_OFFERS)
+                self.button_click(*Company.COMPANY_ORDERS_OFFERS_ORDER)
+                assert "driver/company/orders/order/" in self.browser.current_url , f"link isn't equal "
+                self.button_click(*Company.COMPANY_ORDER_BACK)
+                
+        else:
+            self.button_click(*Company.COMPANY_ORDERS_OFFERS)
+            text = self.browser.find_element(*Company.COMPANY_NO_ORDERS)
+            text = text.text
+            assert "Тут знаходяться замовлення, отримані" in text , f"link isn't equal "
+
+            
+
+
+
 
     # def button_footer(self, how, what):
     #     try:

@@ -71,8 +71,12 @@ class Service():
     ROUTE_CALCULATION_BUTTON_BACK = (By.CSS_SELECTOR, "div.map-links span.link:nth-child(1) > a:nth-child(1)")
     ROUTE_CALCULATION_ORDER = (By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/p[1]")
     ROUTE_CALCULATION_SIDAN = (By.CSS_SELECTOR, "div.distance-calculator div.distance-calculator__params.distance-calculator__params--right div.distance-calculator__param:nth-child(2) div.distance-calculator__param-body div.distance-calculator__radio-group div.custom-radio.custom-radio--circle:nth-child(1) label:nth-child(2) > div.radio-button")
-    ROUTE_CALCULATION_DISEL = (By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/p[2]/label[1]")
+    ROUTE_CALCULATION_DISEL = (By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/p[2]/label[1]")
     ROUTE_CALCULATION_GAS = (By.CSS_SELECTOR, "div.wrapper-fuel-calc-block div.fuel-calc-block div.fuel-calc-content:nth-child(2) div.fuel-calc-block-right.calculate-item div.side-block-radios.radios2.ng-scope:nth-child(1) p.custom-radiobutton:nth-child(3) > label:nth-child(2)")
+    ROUTE_CALCULATION_ANSWER = (By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/p[2]")
+    ROUTE_CALCULATION_ANSWER_ZERO = (By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/p[1]")
+   
+    
     COUNTRY_FIRST_DROPDOWN = (By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]")
     NAME_COUNTRY_FIRST = (By.CSS_SELECTOR, "#focusOnClickWhereFrom")
     COUNTRY_INPUT_FIRST = (By.CSS_SELECTOR, "div.route-calculation__flag-wrapper.first-flag-wrapper > input.form-control.autocity.landing-input.ng-pristine.ng-valid.ng-isolate-scope.ng-empty.ng-touchedw")
@@ -336,7 +340,836 @@ class Header():
     MODERETION_CUSTUMER = (By.XPATH,"div.container-aside.ng-scope aside.fixed-menu ul.list-items-wrapper.ng-scope > li.ng-scope:nth-child(1)")
     MODERETION_CUSTUMER_BUTTON = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/aside[1]/ul[1]/li[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/span[1]")
     MODERETION_CUSTUMER_VERIFICATION = (By.CSS_SELECTOR,"div.container-aside.ng-scope aside.fixed-menu ul.list-items-wrapper.ng-scope > li.ng-scope:nth-child(1)")
+
+class Company ():
+
+############### ORDERS #####################
+
+    COMPANY_COOKIE_BUTTON = (By.CSS_SELECTOR,"body:nth-child(2) div.privacy-block.ng-scope:nth-child(6) div.privacy-wrapper.ng-scope > button:nth-child(4)")
+    COMPANY_ALL_CAR = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[1]/div[3]/p[1]")
+    COMPANY_FREE_CAR = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[2]/div[3]/p[1]")
+    COMPANY_CARGO_CAR = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[3]/div[3]/p[1]")
+    COMPANY_ORDERS = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/ul[1]/li[2]")
+    COMPANY_ORDERS_OFFERS = (By.CSS_SELECTOR,"div.links > p.ng-scope:nth-child(1)")
+    COMPANY_ORDERS_OFFERS_NUMBER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/p[1]/b[1]")
+    COMPANY_ORDERS_OFFERS_ORDER = (By.CSS_SELECTOR,"div.main-content.ng-scope table.tr-table.ng-scope.ng-isolate-scope:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) > td.order-cell:nth-child(1)")
+    COMPANY_ORDERS_IN_PROCESS = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/p[2]")
+    COMPANY_ORDERS_IN_PROCESS_NUMBER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/p[2]/b[1]")
+    COMPANY_ORDER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]")
+    COMPANY_ORDERS_IN_PROCESS_ORDER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[1]/p[1]/span[3]")
+    COMPANY_NO_ORDERS = (By.CSS_SELECTOR,"div.ng-scope div.empty-filter.ng-scope > p.p1.ng-scope:nth-child(2)")
+    COMPANY_ORDER_BACK = (By.CSS_SELECTOR,"div.ng-scope div.order-wrapper.orders-container.ng-scope div.breadcrumb-block div.left-item > a.back-button")
+    COMPANY_ORDERS_DONE = (By.CSS_SELECTOR,"div.left-bar.new-bar div.links p:nth-child(3) > a:nth-child(1)")
+    COMPANY_ORDERS_DONE_ORDER = (By.CSS_SELECTOR,"div.flex-wrapper div:nth-child(1) p.status.ng-scope > span.end")
+    COMPANY_ORDERS_DONE_ORDER_NUMBER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/p[3]/b[1]")
+    COMPANY_ORDERS_CANCELED = (By.CSS_SELECTOR,"div.links p:nth-child(4) > a:nth-child(1)")
+    COMPANY_ORDERS_CANCELED_ORDER_NUMBER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/p[4]/b[1]")
+    COMPANY_ORDERS_CANCELED_MY_ORDER_NUMBER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/p[3]/b[1]")
+    COMPANY_MY_ORDERS = (By.CSS_SELECTOR,"div.subheader-menu.subheader-menu-1024.transports:nth-child(2) > span.menu-item.ng-binding:nth-child(2)")
+    COMPANY_MY_ORDERS_IN_PROCESS = (By.CSS_SELECTOR,"div.links > p:nth-child(1)")
+    COMPANY_MY_ORDERS_IN_PROCESS_NUMBER = (By.CSS_SELECTOR,"div.links p:nth-child(1) > b.ng-binding.ng-scope:nth-child(2)")
+    COMPANY_MY_ORDERS_DONE = (By.CSS_SELECTOR,"div.links > p:nth-child(2)")
+    COMPANY_MY_ORDERS_DONE_ORDER = (By.CSS_SELECTOR,"div.flex-wrapper div:nth-child(1) p.status.ng-scope > span.end")
+    COMPANY_MY_ORDERS_DONE_NUMBER = (By.CSS_SELECTOR,"div.links p:nth-child(2) > b.ng-binding.ng-scope:nth-child(2)")
+    COMPANY_MY_ORDERS_CENCALED = (By.CSS_SELECTOR,"div.links > p:nth-child(3)")
+    COMPANY_ORDERS_FOR_THE_DAY = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[3]")
+    COMPANY_ORDERS_FOR_THE_DAY_OFFERS = (By.CSS_SELECTOR,"p:nth-child(1)")
+    COMPANY_ORDERS_FOR_THE_DAY_IN_PROCESS = (By.CSS_SELECTOR,"div.links > p:nth-child(2)")
+    COMPANY_ORDERS_FOR_THE_DAY_DONE = (By.CSS_SELECTOR,"div.links > p:nth-child(3)")
+    COMPANY_ORDERS_FOR_THE_DAY_CANSELED = (By.CSS_SELECTOR,"div.links > p:nth-child(4)")
     
+    
+    COMPANY_NEW_ORDER = (By.CSS_SELECTOR,"div.subheader-wrapper.ng-pristine.ng-untouched.ng-valid.ng-not-empty > button.vars.green.ng-scope:nth-child(3)")
+    COMPANY_NEW_ORDER_NAME = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.company-container.ui-view.ng-scope > div > div > div.freight-form > div.part3.company-client-block > div.client-data.ng-isolate-scope > div:nth-child(1) > input")
+    COMPANY_NEW_ORDER_COMPANY = (By.CSS_SELECTOR,"div.data-item:nth-child(2) > input.default.client-company.ng-pristine.ng-untouched.ng-valid.ng-empty:nth-child(2)")
+    COMPANY_NEW_ORDER_EMAIL = (By.CSS_SELECTOR,"div.data-item:nth-child(3) > input.default.client-mail.ng-pristine.ng-untouched.ng-valid.ng-empty:nth-child(2)")
+    COMPANY_NEW_ORDER_PHONE = (By.CSS_SELECTOR,"#waypoint-phone")
+    COMPANY_NEW_ORDER_COUNTRY = (By.CSS_SELECTOR,"div.inp.inp--flag.no-shadow.ng-scope > div.flag.flag-ua")
+    COMPANY_NEW_ORDER_FROM = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/ul[2]/li[1]/div[3]/input[2]")
+    COMPANY_NEW_ORDER_FROM_CITY = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.company-container.ui-view.ng-scope > div > div > div.freight-form > div.part2 > ul:nth-child(3) > li.li--block.ng-scope.loading > div.input-wrapper.first-input > div > div.items > ul > li:nth-child(1) > span > i")
+    COMPANY_NEW_ORDER_FROM_CITY_MUKOLAIV = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.company-container.ui-view.ng-scope > div > div > div.freight-form > div.part2 > ul:nth-child(3) > li.li--block.ng-scope.loading > div.input-wrapper.first-input > div > div.items > ul > li:nth-child(2) > span")
+    COMPANY_NEW_ORDER_FROM_CITY_RIVNE = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.company-container.ui-view.ng-scope > div > div > div.freight-form > div.part2 > ul:nth-child(3) > li.li--block.ng-scope.loading > div.input-wrapper.first-input > div > div.items > ul > li:nth-child(1) > span")
+    COMPANY_NEW_ORDER_FROM_CITY_LUBNU = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.company-container.ui-view.ng-scope > div > div > div.freight-form > div.part2 > ul:nth-child(3) > li.li--block.ng-scope.loading > div.input-wrapper.first-input > div > div.items > ul > li:nth-child(1) > span")
+    COMPANY_NEW_ORDER_WHERE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/ul[2]/li[2]/div[3]/input[2]")
+    COMPANY_NEW_ORDER_WHERE_CITY = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.company-container.ui-view.ng-scope > div > div > div.freight-form > div.part2 > ul:nth-child(3) > li.li--block.ng-scope.unloading > div.input-wrapper.first-input > div > div.items > ul > li:nth-child(2) > span")
+    COMPANY_NEW_ORDER_WHERE_CITY_MURGOROD = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/ul[2]/li[2]/div[3]/div/div[1]/ul/li[1]/span")
+    COMPANY_NEW_ORDER_WHERE_CITY_LVIV = (By.XPATH,"html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/ul[2]/li[2]/div[3]/div/div[1]/ul/li[1]/img")
+    COMPANY_NEW_ORDER_WHERE_CITY_KALUSH = (By.XPATH,"html/body/div[1]/div/div[2]/div/div/div[2]/div[2]/ul[2]/li[2]/div[3]/div/div[1]/ul/li[1]/span")
+    COMPANY_NEW_ORDER_FROM_ADRESS = (By.CSS_SELECTOR,"div.input-wrapper.add-address.add-load:nth-child(4) button.loading > span.ng-scope")
+    COMPANY_NEW_ORDER_FROM_ADRESS_ALERT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]")
+    COMPANY_NEW_ORDER_FROM_ADRESS_ALERT_FIRST = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    COMPANY_NEW_ORDER_FROM_ADRESS_ALERT_SECOND = (By.CSS_SELECTOR,"div > div:nth-child(3) > input")
+    COMPANY_NEW_ORDER_FROM_ADRESS_ALERT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button")
+    COMPANY_NEW_ORDER_WHERE_ADRESS = (By.CSS_SELECTOR,"div.input-wrapper.add-address.add-unload:nth-child(4) button.unloading span.ng-scope > span.plus")
+    COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT = (By.CSS_SELECTOR,"div:nth-child(1) > input.default.no-shadow.ym-record-keys.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty:nth-child(1)")
+    COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT_FIRST = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT_SECOND = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > div:nth-child(3) > input")
+    COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button > span")
+    COMPANY_NEW_ORDER_FROM_NEW_CONTACT = (By.CSS_SELECTOR,"div.input-wrapper.add-address:nth-child(5) button.loading > span.ng-scope")
+    COMPANY_NEW_ORDER_FROM_NEW_CONTACT_NAME = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > input:nth-child(1)")
+    COMPANY_NEW_ORDER_FROM_NEW_CONTACT_PHONE = (By.CSS_SELECTOR,"#phone")
+    COMPANY_NEW_ORDER_FROM_NEW_CONTACT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button")
+    COMPANY_NEW_ORDER_WHERE_NEW_CONTACT = (By.CSS_SELECTOR,"div.part2 > ul:nth-child(3) > li.li--block.ng-scope.unloading > div:nth-child(5) > button > span")
+    COMPANY_NEW_ORDER_WHERE_NEW_CONTACT_NAME = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > input:nth-child(1)")
+    COMPANY_NEW_ORDER_WHERE_NEW_CONTACT_PHONE = (By.CSS_SELECTOR,"#phone")
+    COMPANY_NEW_ORDER_WHERE_NEW_CONTACT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button")
+    COMPANY_NEW_ORDER_CARGO = (By.CSS_SELECTOR,"#cargoName")
+    COMPANY_NEW_ORDER_WEIGHT = (By.CSS_SELECTOR,"#cargoWeight")
+    COMPANY_NEW_ORDER_DOWNLOAD = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/div[3]/checklist-dropdown[1]/div[1]/div[1]/span[2]")
+    COMPANY_NEW_ORDER_DOWNLOAD_TYPE = (By.CSS_SELECTOR,".checklist-dropdown .list .item p label span")
+    COMPANY_NEW_ORDER_TYPE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/div[4]/checklist-dropdown[1]/div[1]/div[1]/span[1]")
+    COMPANY_NEW_ORDER_TYPE_TENT = (By.CSS_SELECTOR,"div.item.ng-scope.lvl2:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_TYPE_BLIND = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl2:nth-child(4) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PRISE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/input[1]")
+    COMPANY_NEW_ORDER_PRISE_ALERT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")
+    COMPANY_NEW_ORDER_ALERT_PRISE_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div.modal-body.after > div > div > button")
+    COMPANY_NEW_ORDER_PRISE_TYPE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[1]/div[1]/p[1]")
+    COMPANY_NEW_ORDER_PRISE_MOMENT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[4]/div[1]/div[1]/div[1]/p[1]")
+    COMPANY_NEW_ORDER_SEE_THE_CAR = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope div.order-footer > button.green.default.saveStep")
+    COMPANY_NEW_ORDER_CANSEL = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope div.order-footer div.cancel-order > a.cancel")
+    COMPANY_NEW_ORDER_REVIEWS = (By.CSS_SELECTOR,"div.left p:nth-child(1) > a.vars:nth-child(1)")
+    COMPANY_NEW_ORDER_SEE_THE_PEISES = (By.CSS_SELECTOR,"div.left p:nth-child(1) > a.vars.ng-scope:nth-child(2)")
+    COMPANY_NEW_ORDER_BUTTON_AGREE = (By.CSS_SELECTOR,"div.make-order-wrap.add-freight.new-make-order.ng-scope div.wrapper-steps.ng-scope div.order-footer > button.green.default.saveStep")
+    COMPANY_NEW_ORDER_AGREE = (By.CSS_SELECTOR,"div.left p:nth-child(1) > a.vars:nth-child(4)")
+    COMPANY_NEW_ORDER_TRANSPORTICA = (By.CSS_SELECTOR,"div.right p:nth-child(1) > a.vars.fs15:nth-child(2)")
+    COMPANY_NEW_ORDER_BACK = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope > a.global-back.vars")
+    COMPANY_NEW_ORDER_CAR_ALERT = (By.CSS_SELECTOR,"div.transport-item.ng-scope div.choose-buttons.ng-scope > button.vars.green.ng-scope")
+    COMPANY_NEW_ORDER_CAR_ALERT_TEXT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/p[2]/span[1]")
+    COMPANY_NEW_ORDER_CAR_ALERT_CANCEL = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]")
+    COMPANY_NEW_ORDER_ALERT_NO_CAR = (By.CSS_SELECTOR,"body.modal-open:nth-child(2) div.modal.fade.ng-scope.ng-isolate-scope.in:nth-child(1) div.modal-dialog div.modal-content div.additional-info-modal.select-transport-modal.ng-scope div:nth-child(1) div.no-transports:nth-child(5) > p.l1:nth-child(2)")
+
+
+    COMPANY_NEW_ORDER_ADDITIONAL = (By.CSS_SELECTOR,"div.freight-form__field.ng-scope:nth-child(7) label.freight-form__field-label > a.vars")
+    COMPANY_NEW_ORDER_PALET = (By.CSS_SELECTOR,"div.pallets-block div.pallets-block__main p.custom-checkbox label:nth-child(2) > span.outbox.bold.ng-binding")
+    COMPANY_NEW_ORDER_PALET_WIDTH = (By.CSS_SELECTOR,"div.pallets-size:nth-child(2) > input.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty.invalid-model")
+    COMPANY_NEW_ORDER_PALET_HIDHT = (By.CSS_SELECTOR,"div.pallets-size:nth-child(1) > input.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty.invalid-model")
+    COMPANY_NEW_ORDER_VOLUME = (By.CSS_SELECTOR,"#cargoVolume")
+    COMPANY_NEW_ORDER_PALET_EURO = (By.CSS_SELECTOR,"div.custom-radio:nth-child(2) label:nth-child(2) > div.radio-button")
+    COMPANY_NEW_ORDER_PALET_AGREE = (By.CSS_SELECTOR,"div.additional-info-modal.pallets-modal.ng-scope div.white div.fields:nth-child(3) div.button-wrapper:nth-child(3) > button.default.green")
+    COMPANY_NEW_ORDER_ACCOMPANIMENT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[6]/td[1]/p[1]/label[1]/span[1]")
+    COMPANY_NEW_ORDER_ACCOMPANIMENT_NAME = (By.CSS_SELECTOR,"#expeditorName")
+    COMPANY_NEW_ORDER_ACCOMPANIMENT_PHONE = (By.CSS_SELECTOR,"#expeditorPhone")
+    COMPANY_NEW_ORDER_TEMPERATURE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(7) > td > p > label > span")
+    COMPANY_NEW_ORDER_TEMPERATURE_INPUT = (By.CSS_SELECTOR,"#temperature")
+    COMPANY_NEW_ORDER_BELTS = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(8) > td > p > label > span")
+    COMPANY_NEW_ORDER_BELTS_INPUT = (By.CSS_SELECTOR,"#belts")
+
+    COMPANY_NEW_ORDER_PERMITS = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(9) > td > p > label > span")
+    COMPANY_NEW_ORDER_PERMITS_INPUT = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(9) > td.permissions.ng-scope > checklist-dropdown > div > div.dropdown-field > span.text.ng-binding.placeholder")
+    COMPANY_NEW_ORDER_PERMITS_CMR = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_TIR = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_T1 = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(3) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_T2 = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(4) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR1 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(5) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR2 = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(6) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR3 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(7) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR4 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(8) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR5 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(9) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR6 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(10) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR7 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(11) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR8 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(12) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_ADR9 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(13) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_EKMT = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(14) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_SANPASS = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(15) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_SANBOOK = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(16) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_CUSTOMS_CERTIFICATE = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(17) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_PERMITS_CUSTOMS_CONTROL = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(18) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_NEW_ORDER_WOODEN_FLOOR = (By.CSS_SELECTOR, "body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(10) > td:nth-child(1) > p > label > span" )
+
+    COMPANY_NEW_ORDER_BOARD = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(11) > td:nth-child(1) > p > label > span")
+    COMPANY_NEW_ORDER_COMMENTS = (By.CSS_SELECTOR,"div.additional-info-modal.company-info-modal.ng-scope div:nth-child(1) div.note:nth-child(4) > textarea.ng-pristine.ng-untouched.ng-valid.ng-empty")
+    COMPANY_NEW_ORDER_ADDITIONAL_AGREE = (By.CSS_SELECTOR,"div.additional-info-modal.company-info-modal.ng-scope div:nth-child(1) > button.saveStep.submit.uk:nth-child(5)")
+
+
+    COMPANY_NEW_ORDER_CURRENSY = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[2]/div[1]/dropdown-one[1]/div[1]/div[1]/span[1]")
+    COMPANY_NEW_ORDER_EURO = (By.CSS_SELECTOR,"div.item.ng-scope:nth-child(1) > p.ng-binding")
+    COMPANY_NEW_ORDER_USD = (By.CSS_SELECTOR,"div.item.ng-scope:nth-child(8) > p.ng-binding")
+    COMPANY_NEW_ORDER_VND = (By.CSS_SELECTOR,"div.item.ng-scope:nth-child(132) > p.ng-binding")
+    COMPANY_NEW_ORDER_UAH = (By.XPATH,"//p[contains(text(),'UAH')]")
+
+    COMPANY_NEW_ORDER_TYPE_OF_PAY = (By.CSS_SELECTOR,"div.freight-form__field:nth-child(3) div.freight-form__field-control div.dropdown-cust div.inp > span.caret")
+    COMPANY_NEW_ORDER_CARD = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[1]/div[2]/ul[1]/li[1]")
+    COMPANY_NEW_ORDER_CASHLESS = (By.CSS_SELECTOR,"#cashless")
+    COMPANY_NEW_ORDER_CASH = (By.CSS_SELECTOR,"#cash")
+    COMPANY_NEW_ORDER_VAT = (By.CSS_SELECTOR,"#cashless_vat")
+
+    COMPANY_NEW_ORDER_PAY_MOMENT = (By.CSS_SELECTOR,"div.freight-form__field-control.freight-form__field-control--multiple div.dropdown-cust div.inp > span.caret")
+    COMPANY_NEW_ORDER_PREPAYMENT = (By.CSS_SELECTOR,"#prepayment")
+    COMPANY_NEW_ORDER_AT_UNLOADING = (By.CSS_SELECTOR,"#at_unloading")
+    COMPANY_NEW_ORDER_AT_LOADING = (By.CSS_SELECTOR,"#at_loading")
+    COMPANY_NEW_ORDER_PROCENT = (By.CSS_SELECTOR,"#paymentInfo")
+    COMPANY_NEW_ORDER_AGREE_TEXT= (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope > p.make-order-error")
+
+    ################## CARS ##############
+
+    COMPANY_CARS = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/ul[1]/li[3]")
+    COMPANY_CARS_CAR = (By.CSS_SELECTOR,"div.container.containerTransport.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.transportTr.with-partner.ng-scope td.mark-info.transports-pad.ng-scope:nth-child(1) > a.vars.ng-binding.ng-scope")
+    COMPANY_CARS_CAR_BACK = (By.CSS_SELECTOR,"div.ng-scope:nth-child(5) div.company.ng-scope div.company-container.ui-view.ng-scope div.container.containerTransport.ng-scope div.order-wrapper.driver-info-wrapper.transport-info.ng-scope div.breadcrumb-block div.left-item > a.back-button")
+    COMPANY_CARS_CAR_INFO = (By.CSS_SELECTOR,"div.ng-scope:nth-child(5) div.company.ng-scope div.company-container.ui-view.ng-scope div.container.containerTransport.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.transportTr.with-partner.ng-scope td:nth-child(7) > div.td-triangle")
+    COMPANY_CARS_CAR_ORDER = (By.CSS_SELECTOR,"div.order-preview.ng-scope div.block.with-trailer:nth-child(1) div.with-photo:nth-child(4) div.links > a.vars.ng-scope:nth-child(1)")
+    COMPANY_CARS_CAR_DRIVER = (By.CSS_SELECTOR,"div.container.containerTransport.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.transportTr.with-partner.ng-scope td.current-driver:nth-child(5) p.subdriver-name > a.vars.ng-binding")
+    COMPANY_CARS_CAR_FILTER = (By.CSS_SELECTOR,"div.container.containerTransport.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope tr:nth-child(1) th.ng-scope:nth-child(1) span:nth-child(1) span:nth-child(2) > span.caret")
+    COMPANY_CARS_CAR_ALL_CARS = (By.CSS_SELECTOR,"div.popover-inner div.popover-content div.period-picker.tabs-picker.ng-scope ul.for-tabs li:nth-child(1) > span.ng-scope")
+    COMPANY_CARS_CAR_ENTRY_CARS = (By.CSS_SELECTOR,"div.popover-inner div.popover-content div.period-picker.tabs-picker.ng-scope ul.for-tabs > li:nth-child(2)")
+    COMPANY_CARS_CAR_CARS_WITH_CARGO = (By.CSS_SELECTOR,"div.popover-inner div.popover-content div.period-picker.tabs-picker.ng-scope ul.for-tabs > li:nth-child(3)")
+    
+    
+    COMPANY_CARS_CAR_EDIT = (By.CSS_SELECTOR,"div.order-blocks.driver-info div.order-info-block.info div.block div.links-wrapper.with-photo.ng-scope:nth-child(7) div.links > a.vars:nth-child(1)")
+    COMPANY_CARS_CAR_EDIT_BACK = (By.CSS_SELECTOR,"div.ng-scope div.company-edit-transport-wrapper.editTransport.ng-scope div:nth-child(1) > a:nth-child(1)")
+    COMPANY_CARS_CAR_CHANGE_DRIVER = (By.CSS_SELECTOR,"div.order-info-block.info div.block div.links-wrapper.with-photo.ng-scope:nth-child(7) div.links > a.vars.ng-scope:nth-child(2)")
+    COMPANY_CARS_CAR_CHANGE_DRIVER_ALERT = (By.CSS_SELECTOR,"div.customModal.setDriverTransport.ng-scope div.wrapper.setDriver.ng-scope div.contentModal:nth-child(2) label.change div.dropdown-cust.editable > span.caret")
+    COMPANY_CARS_CAR_CHANGE_DRIVER_ALERT_DRIVER = (By.CSS_SELECTOR,"div.customModal.setDriverTransport.ng-scope div.wrapper.setDriver.ng-scope div.contentModal:nth-child(2) label.change div.dropdown-cust.editable div.drop-menu ul:nth-child(1) li.ng-scope:nth-child(2) > span.ng-binding:nth-child(1)")
+    COMPANY_CARS_CAR_CHANGE_DRIVER_ALERT_AGREE = (By.CSS_SELECTOR,"div.customModal.setDriverTransport.ng-scope div.wrapper.setDriver.ng-scope > button.vars.green:nth-child(4)")
+    COMPANY_CARS_CAR_CHANGE_DRIVER_ALERT_BAD = (By.CSS_SELECTOR,"div.customModal.errorModal.ng-scope div.wrapper > h3.ng-binding.ng-scope:nth-child(2)")
+    COMPANY_CARS_CAR_CHANGE_DRIVER_ALERT_BAD_AGREE = (By.CSS_SELECTOR,"div.customModal.errorModal.ng-scope div.wrapper > button.modalSave.vars.green:nth-child(3)")
+    COMPANY_CARS_CAR_DELETE = (By.CSS_SELECTOR,"div.order-wrapper.driver-info-wrapper.transport-info.ng-scope div.order-blocks.driver-info div.order-info-block.info div.block div.links-wrapper.with-photo.ng-scope:nth-child(7) div.links > a.vars.red:nth-child(3)")
+    COMPANY_CARS_CAR_DELETE_TEXT = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modalContent > h2.ng-binding:nth-child(2)")
+    COMPANY_CARS_CAR_DELETE_ALERT_CANCEL = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modal-footer > a:nth-child(1)")
+
+    COMPANY_CARS_CAR_NEW_CAR = (By.CSS_SELECTOR,"div.subheader-wrapper.with-distance.transports > div.filter-wrapper.ng-scope")
+    COMPANY_CARS_CAR_NEW_MARK = (By.CSS_SELECTOR,"#mark")
+    COMPANY_CARS_CAR_NEW_YEAR = (By.CSS_SELECTOR,"#year")
+    COMPANY_CARS_CAR_NEW_NUMBER = (By.CSS_SELECTOR,"#licensePlate")
+
+    COMPANY_CARS_CAR_NEW_CATEGORY = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(4) td:nth-child(2) div.dropdown-cust div.inp.invalid-model > span.caret")
+    COMPANY_CARS_CAR_NEW_CATEGORY_TRUCK = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(4) td:nth-child(2) div.dropdown-cust div.drop-menu ul:nth-child(1) > li:nth-child(1)")
+    COMPANY_CARS_CAR_NEW_CATEGORY_TRACTOR = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(4) td:nth-child(2) div.dropdown-cust div.drop-menu ul:nth-child(1) > li:nth-child(2)")
+    COMPANY_CARS_CAR_NEW_CATEGORY_MICROBUS = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(4) td:nth-child(2) div.dropdown-cust div.drop-menu ul:nth-child(1) > li:nth-child(3)")
+    COMPANY_CARS_CAR_NEW_CATEGORY_VAN = (By.CSS_SELECTOR,"#van")
+
+    COMPANY_CARS_CAR_NEW_TYPE = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(5) td:nth-child(2) div.dropdown-cust div.inp.invalid-model > span.caret")
+    COMPANY_CARS_CAR_NEW_TYPE_TENT = (By.CSS_SELECTOR,"#tilt")
+    COMPANY_CARS_CAR_NEW_TYPE_ISOMETR = (By.CSS_SELECTOR,"#isotherms")
+    COMPANY_CARS_CAR_NEW_TYPE_BLIND = (By.CSS_SELECTOR,"#curtain_side_truck")
+    COMPANY_CARS_CAR_NEW_TYPE_TRANSPORTER = (By.CSS_SELECTOR,"#transporter")
+
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(6) td:nth-child(2) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.dropdown-field > span.caret")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_UP = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_LATERAL = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_BACK = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(3) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_FULL = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(4) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_NO_GATE = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(5) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_OFF_STACKS = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(6) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_OFF_TRANSVERSE = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(7) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_GIDROBORD = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(8) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_OFF = (By.CSS_SELECTOR,"div.checklist-dropdown div.dropdown-field > span.text.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_VAN = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(5) td:nth-child(2) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.dropdown-field > span.text.ng-binding")
+    COMPANY_CARS_CAR_NEW_TYPE_DOWNLOAD_VAN_UP = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.editTransport.ng-scope div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(5) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+
+    COMPANY_CARS_CAR_NEW_PERMISSION = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) td:nth-child(2) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.dropdown-field > span.caret")
+    COMPANY_CARS_CAR_NEW_PERMISSION_CMR = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_TIR = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_T1 = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(3) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_T2 = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(4) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR1 = (By.CSS_SELECTOR," div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(5) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR2 = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(6) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR3 = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(7) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR4 = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(8) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR5 = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(9) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR6 = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(10) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR7 = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(11) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR8 = (By.CSS_SELECTOR," div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(12) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_ADR9 = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(13) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_EKMT = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(14) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_SANPASS = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(15) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_SANBOOK = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(16) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_CUSTOMS_CERTIFICATE = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(17) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_CUSTOMS_CONTROL = (By.CSS_SELECTOR,"div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(18) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_TRACTOR = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.editTransport.ng-scope div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) td:nth-child(2) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.dropdown-field > span.text.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_TRACTOR_CMR = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.editTransport.ng-scope div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_TRACTOR_T1 = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.editTransport.ng-scope div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(7) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(3) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    COMPANY_CARS_CAR_NEW_PERMISSION_TRACTOR_BACK = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.editTransport.ng-scope div.company-edit-transport:nth-child(3) div.register-form tr.ng-scope:nth-child(6) td:nth-child(2) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.dropdown-field.with-shadow > span.text.ng-binding")
+    
+    COMPANY_CARS_CAR_NEW_LENGTH = (By.CSS_SELECTOR,"#length")
+    COMPANY_CARS_CAR_NEW_WIDTH = (By.CSS_SELECTOR,"#width")
+    COMPANY_CARS_CAR_NEW_HEIGHT = (By.CSS_SELECTOR,"#height")
+    COMPANY_CARS_CAR_NEW_VOLUME = (By.CSS_SELECTOR,"#volume")
+    COMPANY_CARS_CAR_NEW_CAPACITY = (By.CSS_SELECTOR,"#capacity")
+
+    COMPANY_CARS_CAR_NEW_TRAILER = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form tr:nth-child(1) td:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox")
+    COMPANY_CARS_CAR_NEW_TRAILER_NUMBER = (By.CSS_SELECTOR,"#licensePlate2")
+    COMPANY_CARS_CAR_NEW_TRAILER_CAPACITY = (By.CSS_SELECTOR,"#capacity2")
+    COMPANY_CARS_CAR_NEW_TRAILER_TRACTOR_NUMBER = (By.CSS_SELECTOR,"#licensePlate2")
+    COMPANY_CARS_CAR_NEW_TRAILER_TRACTOR_LENGTH = (By.CSS_SELECTOR,"#length2")
+    COMPANY_CARS_CAR_NEW_TRAILER_TRACTOR_WIDTH = (By.CSS_SELECTOR,"#width2")
+    COMPANY_CARS_CAR_NEW_TRAILER_TRACTOR_HEIGHT = (By.CSS_SELECTOR,"#height2")
+    COMPANY_CARS_CAR_NEW_TRAILER_TRACTOR_CAPACITY = (By.CSS_SELECTOR,"#capacity2")
+
+
+    COMPANY_CARS_CAR_NEW_SAVE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]/span[2]")
+    COMPANY_CARS_CAR_NEW_SAVE_ALERT_TEXT = (By.CSS_SELECTOR,"div.customModal.after-add-transport.ng-scope > h3:nth-child(3)")
+    COMPANY_CARS_CAR_NEW_SAVE_ALERT_CITY = (By.CSS_SELECTOR,"#waypoint-city")
+    COMPANY_CARS_CAR_NEW_SAVE_ALERT_AGREE = (By.CSS_SELECTOR,"div.customModal.after-add-transport.ng-scope div.change-filter:nth-child(5) > button.vars.green")
+    COMPANY_CARS_CAR_NEW_SAVE_ALERT_CANCEL = (By.CSS_SELECTOR,"div.customModal.after-add-transport.ng-scope > button.close:nth-child(1)")
+    COMPANY_CARS_CAR_NEW_SAVE_EMPTY_TEXT = (By.CSS_SELECTOR,"div.company-edit-transport:nth-child(3) div.register-form > p.error.ng-binding.ng-scope:nth-child(3)")
+    COMPANY_CARS_CAR_NEW_CANCEL = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.editTransport.ng-scope div.company-edit-transport:nth-child(3) div.register-form div.register-footer:nth-child(4) > a.vars.ng-scope:nth-child(1)")
+
+    COMPANY_DRIVERS = (By.CSS_SELECTOR,"div.ng-scope:nth-child(5) div.company.ng-scope div.header-wrapper header.company-header ul:nth-child(4) li.ng-scope:nth-child(4) > a:nth-child(1)")
+    COMPANY_DRIVERS_DRIVER = (By.CSS_SELECTOR,"div.container.containerTransport.drivers-wrapper.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.transportTr.with-partner.ng-scope:nth-child(3) td.mark-info:nth-child(1) > a.vars.ng-binding")
+    COMPANY_DRIVERS_DRIVER_BACK = (By.CSS_SELECTOR,"div.order-wrapper.driver-info-wrapper.ng-scope div.breadcrumb-block div.left-item a.back-button > span.ng-scope")
+    COMPANY_DRIVERS_DRIVER_INFO = (By.CSS_SELECTOR,"div.container.containerTransport.drivers-wrapper.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.transportTr.with-partner.ng-scope:nth-child(7) td:nth-child(5) > div.td-triangle")
+    COMPANY_DRIVERS_DRIVER_APPOINT_CUSTOMER = (By.CSS_SELECTOR,"div.block.with-order:nth-child(1) div.links-wrapper div.links > a.vars.blue.ng-scope:nth-child(1)")
+    COMPANY_DRIVERS_DRIVER_APPOINT_BACK = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope > a.global-back.vars")
+    COMPANY_DRIVERS_DRIVER_EDIT = (By.CSS_SELECTOR,"div.order-preview.driver-fix.ng-scope div.block.with-order:nth-child(1) div.links-wrapper div.links > a.vars:nth-child(3)")
+    COMPANY_DRIVERS_DRIVER_EDIT_BACK = (By.CSS_SELECTOR,"#breadcrumb")
+    COMPANY_DRIVERS_DRIVER_CHANGE_CAR = (By.CSS_SELECTOR,"div.block.with-order:nth-child(1) div.links-wrapper div.links > a.vars.ng-scope:nth-child(4)")
+    COMPANY_DRIVERS_DRIVER_CHANGE_CAR_ALERT_TEXT = (By.CSS_SELECTOR,"div.customModal.setDriverTransport.ng-scope div.wrapper.setTransport.ng-scope > h1:nth-child(1)")
+    COMPANY_DRIVERS_DRIVER_FEEDBACK = (By.CSS_SELECTOR,"div.order-preview.driver-fix.ng-scope div.block.with-order:nth-child(1) div.links-wrapper div.links > a.vars.ng-scope:nth-child(5)")
+    COMPANY_DRIVERS_DRIVER_DELETE = (By.CSS_SELECTOR,"div.order-preview.driver-fix.ng-scope div.block.with-order:nth-child(1) div.links-wrapper div.links > a.vars.red.ng-scope:nth-child(6)")
+    COMPANY_DRIVERS_DRIVER_DELETE_CANCEL = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modal-footer > a:nth-child(1)")
+    COMPANY_DRIVERS_DRIVER_MAP = (By.CSS_SELECTOR,"div.td-buttons-wrapper.ng-scope > a.on-map.vars.ng-scope")
+    COMPANY_DRIVERS_DRIVER_MAP_CANCEL = (By.CSS_SELECTOR,"div.ng-scope.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom > div.map-close.ng-scope")
+
+    COMPANY_DRIVERS_FILTERS = (By.CSS_SELECTOR,"div.container.containerTransport.drivers-wrapper.ng-scope:nth-child(2) table.tr-table.ng-isolate-scope thead:nth-child(1) tr:nth-child(1) th:nth-child(1) span.ng-scope:nth-child(2) > span.filter-choice:nth-child(1)")
+    COMPANY_DRIVERS_FILTERS_ALL = (By.CSS_SELECTOR,"div.period-picker.tabs-picker.ng-scope ul.for-tabs li:nth-child(1) > span.ng-scope")
+    COMPANY_DRIVERS_FILTERS_EMPTY = (By.CSS_SELECTOR,"div.period-picker.tabs-picker.ng-scope ul.for-tabs > li:nth-child(2)")
+    COMPANY_DRIVERS_FILTERS_EMPTY_TEXT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/p[1]/span[2]")
+    COMPANY_DRIVERS_FILTERS_WITH_CARGO = (By.CSS_SELECTOR,"div.period-picker.tabs-picker.ng-scope ul.for-tabs > li:nth-child(3)")
+    COMPANY_DRIVERS_FILTERS_WITH_TEXT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/p[1]/span[2]")
+
+    COMPANY_DRIVERS_DRIVER_NEW = (By.CSS_SELECTOR,"div.subheader-wrapper.with-distance.drivers div.filter-wrapper.ng-scope button.vars.add-item-button > span.ng-scope")
+    COMPANY_DRIVERS_DRIVER_NEW_NUMBER = (By.CSS_SELECTOR,"#phone")
+    COMPANY_DRIVERS_DRIVER_NEW_NUMBER_TWO = (By.CSS_SELECTOR,"div.company-edit-transport div.register-form table:nth-child(2) tbody:nth-child(1) tr:nth-child(1) td.with-country > a.vars.fieldEdit")
+    COMPANY_DRIVERS_DRIVER_NEW_NUMBER_TWO_NUMBER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/input[1]")
+    COMPANY_DRIVERS_DRIVER_NEW_NUMBER_TWO_DELETE = (By.CSS_SELECTOR,"div.register-form table:nth-child(2) tbody:nth-child(1) tr.ng-scope:nth-child(2) td.with-country:nth-child(2) > a.vars.fieldEdit.red")
+    COMPANY_DRIVERS_DRIVER_NEW_LAST_NAME = (By.CSS_SELECTOR,"#lastName")
+    COMPANY_DRIVERS_DRIVER_NEW_FIRST_NAME = (By.CSS_SELECTOR,"#firstName")
+    COMPANY_DRIVERS_DRIVER_NEW_EMAIL = (By.CSS_SELECTOR,"#email")
+    COMPANY_DRIVERS_DRIVER_NEW_LICENSE = (By.CSS_SELECTOR,"#license")
+    COMPANY_DRIVERS_DRIVER_NEW_ADD = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]")
+    COMPANY_DRIVERS_DRIVER_NEW_ADD_TEXT = (By.CSS_SELECTOR,"div.customModal.info.customInfo.ng-scope form.ng-pristine.ng-valid div.modalContent h1:nth-child(1) > span.ng-scope")
+    COMPANY_DRIVERS_DRIVER_NEW_CANCEL = (By.CSS_SELECTOR,"div.register-form div.register-footer:nth-child(3) > a.vars.ng-scope:nth-child(1)")
+    COMPANY_DRIVERS_DRIVER_NEW_NO_TEXT = (By.CSS_SELECTOR,"div.company-edit-transport-wrapper.subdriver.ng-scope div.company-edit-transport div.register-form > p.error.red-txt.vars.ng-binding.ng-scope:nth-child(3)")
+
+    COMPANY_CUSTOMERS = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.header-wrapper > header > ul > li:nth-child(5) > a")
+    COMPANY_CUSTOMERS_INFO = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.ng-scope:nth-child(11) td:nth-child(4) div.flex-wr > div.td-triangle")
+    COMPANY_CUSTOMERS_EDIT = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(12) td.active-block div.info-wrapper div.order-preview.ng-scope div.block:nth-child(1) div.client-info div.clientControl p:nth-child(1) > a.vars")
+    COMPANY_CUSTOMERS_EDIT_TEXT = (By.CSS_SELECTOR,"div.customModal.addNewClient.ng-scope div.wrapper > h1.ng-scope")
+    COMPANY_CUSTOMERS_EDIT_CANCEL = (By.CSS_SELECTOR,"div.customModal.addNewClient.ng-scope div.wrapper div.flex-container div.column-left > a.vars:nth-child(4)")
+    COMPANY_CUSTOMERS_EDIT_NAME = (By.CSS_SELECTOR,"div.column-left label:nth-child(1) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-not-empty")
+    COMPANY_CUSTOMERS_EDIT_NAME_TXT = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(12) td.active-block div.info-wrapper div.order-preview.ng-scope div.block:nth-child(1) div.client-info div.value p:nth-child(1) > a.vars.ng-binding")
+    COMPANY_CUSTOMERS_EDIT_PHONE = (By.CSS_SELECTOR,"div.column-right label:nth-child(2) div.phone-wrap > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-not-empty.ng-valid-mask")
+    COMPANY_CUSTOMERS_EDIT_PHONE_TEXT = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(12) td.active-block div.info-wrapper div.order-preview.ng-scope div.block:nth-child(1) div.client-info div.value > p.ng-binding:nth-child(4)")
+    COMPANY_CUSTOMERS_EDIT_COMPANY = (By.CSS_SELECTOR,"div.flex-container div.column-right label:nth-child(1) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-not-empty:nth-child(2)")
+    COMPANY_CUSTOMERS_EDIT_COMPANY_TEXT = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(12) td.active-block div.info-wrapper div.order-preview.ng-scope div.block:nth-child(1) div.client-info div.value > p.ng-binding.ng-scope:nth-child(2)")
+    COMPANY_CUSTOMERS_EDIT_EMAIL = (By.CSS_SELECTOR,"div.modal-content div.customModal.addNewClient.ng-scope div.wrapper div.flex-container div.column-left label:nth-child(2) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-not-empty")
+    COMPANY_CUSTOMERS_EDIT_EMAIL_TEXT = (By.CSS_SELECTOR,"div.container.ng-scope div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(12) td.active-block div.info-wrapper div.order-preview.ng-scope div.block:nth-child(1) div.client-info div.value p:nth-child(3) > a.vars.ng-binding")
+    COMPANY_CUSTOMERS_EDIT_AGREE = (By.CSS_SELECTOR,"div.customModal.addNewClient.ng-scope div.wrapper div.flex-container div.column-right > button.vars.green:nth-child(3)")
+    COMPANY_CUSTOMERS_INFO_FOR_DELETE = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.ng-scope:nth-child(1) td:nth-child(4) div.flex-wr > div.td-triangle")
+    COMPANY_CUSTOMERS_DELETE = (By.CSS_SELECTOR,"div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(2) td.active-block div.info-wrapper div.order-preview.ng-scope div.block div.client-info div.clientControl p:nth-child(3) > a.vars.red-txt")
+    COMPANY_CUSTOMERS_DELETE_TXT = (By.CSS_SELECTOR,"div.customModal.new.deleteCompanyClient.ng-scope div.wrapper > h1.bold:nth-child(2)") ##Удалить заказчика?
+    COMPANY_CUSTOMERS_DELETE_AGREE = (By.CSS_SELECTOR,"div.customModal.new.deleteCompanyClient.ng-scope div.wrapper div.links:nth-child(4) > a.vars.link.red-txt:nth-child(2)")
+    COMPANY_CUSTOMERS_DELETE_CANCEL = (By.CSS_SELECTOR,"div.customModal.new.deleteCompanyClient.ng-scope div.wrapper div.links:nth-child(4) > a.vars.link:nth-child(1)")
+    COMPANY_CUSTOMERS_ALL_CARGO = (By.CSS_SELECTOR,"div.order-preview.ng-scope div.block.ng-scope:nth-child(2) div.order-counter > a.vars:nth-child(2)")
+    COMPANY_CUSTOMERS_ALL_CARGO_TXT = (By.CSS_SELECTOR,"div.ng-scope div.wrapper.container div.info div.block.ng-scope:nth-child(2) div.order-counter > p.total-count")
+    COMPANY_CUSTOMERS_CARGO_FILTR = (By.CSS_SELECTOR,"div.ng-scope div.wrapper.container div.info div.block.ng-scope:nth-child(2) div.order-counter div.controls div.c-filter span:nth-child(1) > span:nth-child(1)")
+    COMPANY_CUSTOMERS_CARGO_FILTR_CENCELED = (By.CSS_SELECTOR,"div.period-picker.ng-scope ul:nth-child(1) > li:nth-child(3)")
+    COMPANY_CUSTOMERS_CARGO_FILTR_CENCELED_TXT = (By.CSS_SELECTOR,"div.ng-scope div.wrapper.container div.no-data.ng-scope div.empty-filter.ng-scope > p.p1:nth-child(2)")##Нічого не знайдено
+    COMPANY_CUSTOMERS_CARGO_FILTR_EXECUTED = (By.CSS_SELECTOR,"div.popover-content div.period-picker.ng-scope ul:nth-child(1) > li:nth-child(2)")
+    COMPANY_CUSTOMERS_CARGO_FILTR_EXECUTED_TXT = (By.CSS_SELECTOR,"div.ng-scope div.wrapper.container div.info div.ng-scope:nth-child(3) div.block.ng-scope:nth-child(2) div.last-orders div.last-order p.order-id > span.status")
+    COMPANY_CUSTOMERS_CARGO_FILTR_ALL = (By.CSS_SELECTOR,"div.period-picker.ng-scope ul:nth-child(1) > li:nth-child(1)")
+    COMPANY_CUSTOMERS_CARGO_FILTR_ALL_TXT = (By.CSS_SELECTOR,"div.ng-scope div.wrapper.container div.info div.ng-scope:nth-child(4) div.block.ng-scope:nth-child(2) div.last-orders div.last-order p.order-id span.status > span.completed.ng-scope")
+
+
+    COMPANY_CUSTOMERS_NEW = (By.CSS_SELECTOR,"div.company-subheader.clientsFilter.ng-scope div.filter.subheader-wrapper div.filter-wrapper > button.vars.add-item-button")
+    COMPANY_CUSTOMERS_NEW_NAME = (By.CSS_SELECTOR,"div.column-left label:nth-child(1) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty.invalid-model")
+    COMPANY_CUSTOMERS_NEW_PHONE = (By.CSS_SELECTOR,"div.phone-wrap > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty.ng-valid-mask.invalid-model")
+    COMPANY_CUSTOMERS_NEW_EMAIL = (By.CSS_SELECTOR,"div.column-left label:nth-child(2) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty.invalid-model")
+    COMPANY_CUSTOMERS_NEW_COMPANY = (By.CSS_SELECTOR,"div.flex-container div.column-right label:nth-child(1) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty:nth-child(2)")
+    COMPANY_CUSTOMERS_NEW_AGREE = (By.CSS_SELECTOR,"div.customModal.addNewClient.ng-scope div.wrapper div.flex-container div.column-right > button.vars.green:nth-child(3)")
+    COMPANY_CUSTOMERS_NEW_AGREE_TEXT = (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope div.wrapper.ng-scope > h1.bold:nth-child(2)")
+    COMPANY_CUSTOMERS_NEW_AGREE_NEW = (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope div.wrapper.ng-scope > a.vars.link:nth-child(3)")
+    COMPANY_CUSTOMERS_NEW_BACK = (By.CSS_SELECTOR,"div.customModal.addNewClient.ng-scope div.wrapper div.flex-container div.column-right > button.vars.green:nth-child(3)")
+    COMPANY_CUSTOMERS_NEW_NO_TXT = (By.CSS_SELECTOR,"div.customModal.addNewClient.ng-scope div.wrapper div.flex-container div.column-left > span.errorMes:nth-child(3)")##Ви заповнили не всі обов'язкові поля
+    
+    COMPANY_CUSTOMERS_CUSTOMER_NEW_ORDER = (By.CSS_SELECTOR,"div.container.ng-scope div.contentTabPag.ng-scope table.tr-table.ng-isolate-scope tr.preview-row.ng-scope:nth-child(12) td.active-block div.info-wrapper div.order-preview.ng-scope div.block:nth-child(1) div.client-info div.clientControl p:nth-child(2) > a.vars")
+
+    COMPANY_EMPLOYEE = (By.CSS_SELECTOR,"div.header-wrapper header.company-header ul:nth-child(4) li.ng-scope:nth-child(6) > a:nth-child(1)")
+    COMPANY_EMPLOYEE_INFO = (By.CSS_SELECTOR,"div.managers-wrapper-inner div.table-wrapper table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.ng-scope td:nth-child(4) > div.td-triangle.ng-scope")
+    COMPANY_EMPLOYEE_EDIT = (By.CSS_SELECTOR,"div.info-wrapper div.order-preview.ng-scope div.block div.client-info div.clientControl p:nth-child(1) > a.vars")
+    COMPANY_EMPLOYEE_EDIT_FIRST_NAME = (By.CSS_SELECTOR,"#firstName")
+    COMPANY_EMPLOYEE_EDIT_FIRST_LAST_NAME_TXT = (By.CSS_SELECTOR,"div.wrapper.container div.info div.block:nth-child(1) h3.h3 div.client-info div.value > p.ng-binding:nth-child(1)")
+    COMPANY_EMPLOYEE_EDIT_LAST_NAME = (By.CSS_SELECTOR,"#lastName")
+    COMPANY_EMPLOYEE_EDIT_EMAIL = (By.CSS_SELECTOR,"#email")
+    COMPANY_EMPLOYEE_EDIT_EMAIL_TXT = (By.CSS_SELECTOR,"div.wrapper.container div.info div.block:nth-child(1) h3.h3 div.client-info div.value p:nth-child(2) > a.vars.ng-binding")
+    COMPANY_EMPLOYEE_EDIT_AGREE = (By.CSS_SELECTOR,"div.buttons button.default.blue.landing-green > span:nth-child(1)")
+
+    #COMPANY_EMPLOYEE_EDIT_AGREE = (By.CSS_SELECTOR,"div.buttons button.default.blue.landing-green > span:nth-child(1)")
+
+    COMPANY_EMPLOYEE_EDIT_BACK = (By.CSS_SELECTOR,"div.register-wrapper.manager-register-wrapper:nth-child(1) > a.back")
+    COMPANY_EMPLOYEE_EDIT_BACK_LIST = (By.CSS_SELECTOR,"div:nth-child(3) div.wrapper.container > a.back.ng-scope")
+
+    COMPANY_EMPLOYEE_EDIT_NEW_ORDER = (By.CSS_SELECTOR,"div.order-preview.ng-scope div.block div.client-info div.clientControl > p:nth-child(2)")
+    COMPANY_EMPLOYEE_EDIT_NEW_ORDER_BACK = (By.CSS_SELECTOR,"div.make-order-wrap.add-freight.new-make-order.ng-scope div.wrapper-steps.ng-scope > a.global-back.vars")
+
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE = (By.CSS_SELECTOR,"div.filter-wrapper button.vars.add-item-button > span.ng-scope")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_TXT = (By.CSS_SELECTOR,"div.customModal.addNewEmployee.ng-scope div.wrapper > h1:nth-child(1)")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_CANCEL_ALERT = (By.CSS_SELECTOR,"div.customModal.addNewEmployee.ng-scope > button.close")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_FIRST_NAME = (By.CSS_SELECTOR,"div.column-left label:nth-child(1) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty.invalid-model")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_LAST_NAME = (By.CSS_SELECTOR,"div.column-left label:nth-child(2) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty.invalid-model")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_EMAIL = (By.CSS_SELECTOR,"div.column-right label:nth-child(1) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-empty.invalid-model")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_AGREE = (By.CSS_SELECTOR,"div.column-right > button.vars.green.ng-scope:nth-child(2)")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_AGREE_TXT = (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope div.wrapper.ng-scope > h1.bold:nth-child(2)")##Приглашение успешно отправлено
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_AGREE_NEW = (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope div.wrapper.ng-scope > a.vars.link:nth-child(3)")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_AGREE_BACK = (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope > button.close")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_TXT_AFTER = (By.CSS_SELECTOR,"div.table-wrapper table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.ng-scope.invite:nth-child(1) td:nth-child(1) p.invite-status.ng-scope > span:nth-child(1)")##Отправлено приглашение
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_CANCEL = (By.CSS_SELECTOR,"div.table-wrapper table.tr-table.ng-isolate-scope tbody:nth-child(2) tr.ng-scope.invite:nth-child(1) td:nth-child(1) p.invite-status.ng-scope > button.radius.orange:nth-child(2)")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_TXT_CANCEL_TXT = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modalContent > h1:nth-child(1)")##Ви підтверджуєте?
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_AGREE_BUTON = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modal-footer > button.blue.ng-binding:nth-child(2)")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_CANCEL_BUTON = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modal-footer > a:nth-child(1)")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_CANCEL_BUTON_CANCEL = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope > button.close")
+    COMPANY_EMPLOYEE_NEW_EMPLOYEE_NO_IMPUT_TXT = (By.CSS_SELECTOR,"div.customModal.addNewEmployee.ng-scope div.wrapper div.flex-container.ng-scope:nth-child(2) > p.errorMes")##Ви заповнили не всі обов'язкові поля
+
+
+
+    COMPANY_DISTANCE = (By.CSS_SELECTOR,"div.header-wrapper header.company-header div.top-links:nth-child(2) div.links-icons.menu-for-desktop:nth-child(1) > a.calc-link.ng-scope:nth-child(9)")
+    COMPANY_DISTANCE_FROM = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[1]/div/input[1]")
+    COMPANY_DISTANCE_FROM_ODESA = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[1]/div/div[2]/div/ul/li[2]/span")
+    COMPANY_DISTANCE_WHERE = (By.CSS_SELECTOR,"div.calculations__content section.calculations__input div.distance-calculator div.distance-calculator__points div.distance-calculator__point.ng-scope:nth-child(2) div:nth-child(2) > input.landing-input-copy.form-control.autocity.to.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty.invalid-model")
+    COMPANY_DISTANCE_WHERE_ENERGODAR = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[2]/div/div[2]/div/ul/li[1]/span")
+    COMPANY_DISTANCE_CAR = (By.CSS_SELECTOR,"div.select-car div.input-wrapper:nth-child(1) div.dropdown-cust div.inp > span.arrow-caret")
+    COMPANY_DISTANCE_CAR_VOLVO = (By.CSS_SELECTOR,"div.mCustomScrollBox.mCS-minimal-dark.mCSB_vertical.mCSB_outside div.mCSB_container.mCS_y_hidden.mCS_no_scrollbar_y ul:nth-child(1) li.ng-scope:nth-child(1) > div.drop-car-item.ng-binding.active:nth-child(1)")
+    COMPANY_DISTANCE_LITR = (By.CSS_SELECTOR,"div.select-car div.input-wrapper.mid:nth-child(2) > input.fuel-data.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty")
+    COMPANY_DISTANCE_AGREE_BUTTON = (By.CSS_SELECTOR,"div.calculations__content section.calculations__input div.distance-calculator div.distance-calculator__points > button.vars.green.no-print:nth-child(3)")
+    COMPANY_DISTANCE_ANSWER = (By.CSS_SELECTOR,"div.calculations__content section.calculations__output div.way-info.white-block div.way-info__header > p:nth-child(1)")
+
+    ##########################   FUEL ##################
+
+    COMPANY_FUEL = (By.CSS_SELECTOR,"body > div:nth-child(5) > div > div.header-wrapper > header > div.top-links > div.links-icons.menu-for-desktop > a:nth-child(8)")
+    COMPANY_FUEL_FROM = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[1]/div/input[1]")
+    COMPANY_FUEL_FROM_RIVNE = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[1]/div/div[2]/div/ul/li[1]/span")
+    COMPANY_FUEL_WHERE = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[2]/div/input[1]")
+    COMPANY_FUEL_WHERE_SUMI = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/div[2]/div/div[2]/div/ul/li[2]/span")
+    COMPANY_FUEL_LITR = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[2]/div[2]/input")
+    COMPANY_FUEL_DISEL = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/section[1]/div[1]/div[2]/div[3]/p[2]/label[1]")
+    COMPANY_FUEL_GAS = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/section[1]/div[1]/div[2]/div[3]/p[3]/label[1]")
+    COMPANY_FUEL_AGREE = (By.XPATH,"/html/body/div[1]/div/div[2]/div/div/section[1]/div/div[1]/button")
+    COMPANY_FUEL_ANSWER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/section[2]/div[1]/div[2]/div[2]/div[1]/p[1]")
+
+    ############################## STATISTIC ##############################
+
+    COMPANY_STATISTIC = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[1]/a[6]/div[1]/img[1]")
+    COMPANY_STATISTIC_QUARTER = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/p[2]/label[1]")
+    COMPANY_STATISTIC_QUARTER_MONTH = (By.CSS_SELECTOR,"body > div.popover.ng-scope.ng-isolate-scope.bottom.fade.in > div.popover-inner > div > ul > li:nth-child(3)")
+
+    COMPANY_STATISTIC_MONTH = (By.XPATH,"/html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div[2]/div/p[1]/label/button/span")
+    COMPANY_STATISTIC_MONTH_MONTH = (By.CSS_SELECTOR,"body > div.popover.ng-scope.ng-isolate-scope.bottom.fade.in > div.popover-inner > div > ul > li:nth-child(9)")
+
+    COMPANY_STATISTIC_YEAR = (By.XPATH,"/html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div[2]/div/p[3]/label/button/span")
+    COMPANY_STATISTIC_YEAR_YEAR = (By.CSS_SELECTOR,"body > div.popover.ng-scope.ng-isolate-scope.bottom.fade.in > div.popover-inner > div > ul > li:nth-child(7)")
+
+    COMPANY_STATISTIC_CARGO = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ul[1]/li[1]/h3[1]")
+    COMPANY_STATISTIC_DISTANCE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ul[1]/li[2]/h3[1]")
+    COMPANY_STATISTIC_TIME = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ul[1]/li[3]/h3[1]")
+    COMPANY_STATISTIC_ALL = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/ul[1]/li[4]/h3[1]")
+    COMPANY_STATISTIC_DRIVER = (By.CSS_SELECTOR,"div.ng-scope:nth-child(5) div.ng-scope table.tr-table.balance-tr.ng-isolate-scope tbody:nth-child(2) tr.ng-scope:nth-child(1) td:nth-child(1) > a.vars.ng-binding")
+    COMPANY_STATISTIC_FILTER_NAME = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/ul[1]/li[1]/input[1]")
+    COMPANY_STATISTIC_FILTER_AGREE = (By.CSS_SELECTOR,"div.ng-scope:nth-child(5) div.filter-wrapper.no-width.ng-scope > button.vars.filter:nth-child(3)")
+
+    ######################## BILING ######################################
+    
+    COMPANY_BILING = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) a.ng-scope:nth-child(6) div.notification-item > img.ng-scope")
+
+    ######################## OPERATOR ######################################
+    
+    COMPANY_OPERATOR = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) a:nth-child(5) div.notification-item > img.ng-scope")
+    COMPANY_OPERATOR_TXT = (By.CSS_SELECTOR,"div.modal-content div.customModal.callModal.ng-scope div.wrapper > h1:nth-child(1)")
+    
+    ######################## HELP ######################################
+
+    COMPANY_HELP = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) a.ng-scope:nth-child(4) div.notification-item > img.ng-scope")
+    COMPANY_HELP_MAP = (By.CSS_SELECTOR,"div.first-content div.left-bar.ng-scope div.links > a.vars:nth-child(1)")
+    COMPANY_HELP_ORDER = (By.CSS_SELECTOR,"div.first-content div.left-bar.ng-scope div.links > a.vars:nth-child(2)")
+    COMPANY_HELP_CAR = (By.CSS_SELECTOR,"div.first-content div.left-bar.ng-scope div.links > a.vars:nth-child(3)")
+    COMPANY_HELP_DRIVER = (By.CSS_SELECTOR,"div.first-content div.left-bar.ng-scope div.links > a.vars:nth-child(4)")
+    COMPANY_HELP_COSTOMER = (By.CSS_SELECTOR,"div.first-content div.left-bar.ng-scope div.links > a.vars:nth-child(5)")
+    COMPANY_HELP_EMPLOYEE = (By.CSS_SELECTOR,"div.first-content div.left-bar.ng-scope div.links > a.vars.ng-scope:nth-child(6)")
+
+    ######################## MESSAGE ######################################
+ 
+    COMPANY_MESSAGE = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) a:nth-child(3) > div.notification-item")
+    COMPANY_MESSAGE_TXT = (By.CSS_SELECTOR,"div.mCSB_container.mCS_y_hidden.mCS_no_scrollbar_y div.notification-list-header > h3:nth-child(1)")
+    COMPANY_MESSAGE_SETTINGS = (By.CSS_SELECTOR,"#settings")
+    COMPANY_MESSAGE_SETTINGS_BACK = (By.CSS_SELECTOR,"div.backToProfile:nth-child(1) > span:nth-child(2)")
+
+        ######################## PROFILE ######################################
+ 
+    COMPANY_PROFILE = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) a:nth-child(1) > img.ng-scope")
+    COMPANY_PROFILE_MY_PROFILE = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) div.profile-menu:nth-child(2) > a:nth-child(1)")
+    COMPANY_PROFILE_FEEDBACK = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) div.profile-menu:nth-child(2) > a:nth-child(2)")
+    COMPANY_PROFILE_EXIT = (By.CSS_SELECTOR,"div.links-icons.menu-for-desktop:nth-child(1) div.profile-menu:nth-child(2) > a:nth-child(3)")
+
+class Customers():
+
+ ################### ORDER ##########################   
+
+    CUSTOMER_NEW_ORDER = (By.CSS_SELECTOR,"#make-order-link")
+    CUSTOMER_NEW_ORDER_BACK = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope > a.global-back.vars.ng-scope")
+    CUSTOMER_NEW_ORDER_ALL_NEW_ADD = (By.CSS_SELECTOR,"div.add-points-link p.additional-points > span:nth-child(1)")
+    
+
+    CUSTOMER_NEW_ORDER_FROM = (By.CSS_SELECTOR,"#cityAddressInput0")
+    CUSTOMER_NEW_ORDER_FROM_ODESA = (By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/div/div/div/div/div[2]/div/div[2]/ul[2]/li[1]/div[3]/div[2]/div[1]/ul/li[2]/span")
+    CUSTOMER_NEW_ORDER_FROM_ODESA_DOWN = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.part2 ul.waypoints:nth-child(3) li.li--block.ng-scope.loading:nth-child(1) div.input-wrapper.first-input.ng-scope:nth-child(3) > div.arrow-up.ng-scope:nth-child(8)")
+    CUSTOMER_NEW_ORDER_FROM_NEW_BUTTON = (By.CSS_SELECTOR,"div.add-point-popover-content.ng-scope > p.in")
+    CUSTOMER_NEW_ORDER_FROM_NEW = (By.CSS_SELECTOR,"#cityAddressInput1")##cityAddressInput+1
+    CUSTOMER_NEW_ORDER_FROM_NEW_RIVNE = (By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/div/div/div/div/div[2]/div/div[2]/ul[2]/li[2]/div[3]/div[2]/div[1]/ul/li[1]/span")
+    CUSTOMER_NEW_ORDER_FROM_NEW_CANCEL = (By.CSS_SELECTOR,"li.li--block.ng-scope.loading:nth-child(2) div.input-wrapper.input-wrapper--waypoint:nth-child(1) > div.delete-waypoint.ng-scope")
+
+
+    CUSTOMER_NEW_ORDER_FROM_NEW_TWO = (By.CSS_SELECTOR,"#cityAddressInput1")##cityAddressInput+1
+    CUSTOMER_NEW_ORDER_FROM_NEW_TERNOPIL = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(3) > span")
+    CUSTOMER_NEW_ORDER_FROM_NEW_TERNOPIL_DOWN = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.part2 ul.waypoints:nth-child(3) li.li--block.ng-scope.loading:nth-child(2) div.input-wrapper.first-input.ng-scope:nth-child(3) > div.arrow-up.ng-scope:nth-child(9)")
+    CUSTOMER_NEW_ORDER_FROM_THREE = (By.CSS_SELECTOR,"#cityAddressInput2")##cityAddressInput+1
+    CUSTOMER_NEW_ORDER_FROM_NEW_SUMI = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    CUSTOMER_NEW_ORDER_FROM_FOUR = (By.CSS_SELECTOR,"#cityAddressInput3")##cityAddressInput+1
+    CUSTOMER_NEW_ORDER_FROM_NEW_DNIPRO = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(1) > span")
+    CUSTOMER_NEW_ORDER_FROM_FIVE = (By.CSS_SELECTOR,"#cityAddressInput4")##cityAddressInput+1
+    CUSTOMER_NEW_ORDER_FROM_NEW_CHKALOVSKE = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(4) > span")
+    
+    CUSTOMER_NEW_ORDER_WHERE_TWO = (By.CSS_SELECTOR,"#cityAddressInput6")
+    CUSTOMER_NEW_ORDER_WHERE_MELITOPOL = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    CUSTOMER_NEW_ORDER_WHERE_THREE = (By.CSS_SELECTOR,"#cityAddressInput7")
+    CUSTOMER_NEW_ORDER_WHERE_PIATNUZKE = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(1) > span")
+    CUSTOMER_NEW_ORDER_WHERE_FOUR = (By.CSS_SELECTOR,"#cityAddressInput8")
+    CUSTOMER_NEW_ORDER_WHERE_VUSHENKI = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    CUSTOMER_NEW_ORDER_WHERE_VUSHENKI_UP = (By.CSS_SELECTOR,"div.inner-view.ng-scope div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.part2 ul.waypoints:nth-child(3) li.li--block.ng-scope.unloading:nth-child(8) div.input-wrapper.first-input.ng-scope:nth-child(3) > div.arrow-down.ng-scope:nth-child(8)")
+    CUSTOMER_NEW_ORDER_WHERE_FIVE = (By.CSS_SELECTOR,"#cityAddressInput9")
+    CUSTOMER_NEW_ORDER_WHERE_PIATUHATKU = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(3) > span")
+
+
+    CUSTOMER_NEW_ORDER_WHERE = (By.CSS_SELECTOR,"#cityAddressInput1")
+    CUSTOMER_NEW_ORDER_WHERE_KRIVUYRIG = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(1) > span")
+    CUSTOMER_NEW_ORDER_WHERE_KRIVUYRIG_UP = (By.CSS_SELECTOR,"div.inner-view.ng-scope div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.part2 ul.waypoints:nth-child(3) li.li--block.ng-scope.unloading:nth-child(10) div.input-wrapper.first-input.ng-scope:nth-child(3) > div.arrow-down.ng-scope:nth-child(8)")
+    CUSTOMER_NEW_ORDER_WHERE_NEW_BUTTON = (By.CSS_SELECTOR,"div.add-point-popover-content.ng-scope > p.out")
+    CUSTOMER_NEW_ORDER_WHERE_NEW = (By.CSS_SELECTOR,"#cityAddressInput2")
+    CUSTOMER_NEW_ORDER_WHERE_NEW_TERNOPIL = (By.CSS_SELECTOR,"div.input-wrapper.first-input.ng-scope > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    CUSTOMER_NEW_ORDER_WHERE_CANCEL = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.part2 ul.waypoints:nth-child(3) li.li--block.ng-scope.unloading:nth-child(2) div.input-wrapper.input-wrapper--waypoint:nth-child(1) > div.delete-waypoint.ng-scope")
+
+    # COMPANY_NEW_ORDER_FROM_ADRESS = (By.CSS_SELECTOR,"div.input-wrapper.add-address.add-load:nth-child(4) button.loading > span.ng-scope")
+    # COMPANY_NEW_ORDER_FROM_ADRESS_ALERT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]")
+    # COMPANY_NEW_ORDER_FROM_ADRESS_ALERT_FIRST = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    # COMPANY_NEW_ORDER_FROM_ADRESS_ALERT_SECOND = (By.CSS_SELECTOR,"div > div:nth-child(3) > input")
+    # COMPANY_NEW_ORDER_FROM_ADRESS_ALERT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button")
+    # COMPANY_NEW_ORDER_WHERE_ADRESS = (By.CSS_SELECTOR,"div.input-wrapper.add-address.add-unload:nth-child(4) button.unloading span.ng-scope > span.plus")
+    # COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT = (By.CSS_SELECTOR,"div:nth-child(1) > input.default.no-shadow.ym-record-keys.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty:nth-child(1)")
+    # COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT_FIRST = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")
+    # COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT_SECOND = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > div:nth-child(3) > input")
+    # COMPANY_NEW_ORDER_WHERE_ADRESS_ALERT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button > span")
+    # COMPANY_NEW_ORDER_FROM_NEW_CONTACT = (By.CSS_SELECTOR,"div.input-wrapper.add-address:nth-child(5) button.loading > span.ng-scope")
+    # COMPANY_NEW_ORDER_FROM_NEW_CONTACT_NAME = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > input:nth-child(1)")
+    # COMPANY_NEW_ORDER_FROM_NEW_CONTACT_PHONE = (By.CSS_SELECTOR,"#phone")
+    # COMPANY_NEW_ORDER_FROM_NEW_CONTACT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button")
+    # COMPANY_NEW_ORDER_WHERE_NEW_CONTACT = (By.CSS_SELECTOR,"div.part2 > ul:nth-child(3) > li.li--block.ng-scope.unloading > div:nth-child(5) > button > span")
+    # COMPANY_NEW_ORDER_WHERE_NEW_CONTACT_NAME = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > div > input:nth-child(1)")
+    # COMPANY_NEW_ORDER_WHERE_NEW_CONTACT_PHONE = (By.CSS_SELECTOR,"#phone")
+    # COMPANY_NEW_ORDER_WHERE_NEW_CONTACT_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > div > form > button")
+
+
+
+    CUSTOMER_NEW_ORDER_CARGO = (By.CSS_SELECTOR,"#cargoName")
+    CUSTOMER_NEW_ORDER_WEIGHT = (By.CSS_SELECTOR,"#cargoWeight")
+    CUSTOMER_NEW_ORDER_VOLUME_CARGO = (By.CSS_SELECTOR,"#cargoVolume")
+
+
+    # CUSTOMER_NEW_ORDER_CAR_TYPE = (By.CSS_SELECTOR,"div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.dropdown-field > span.text.ng-binding.placeholder")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    # CUSTOMER_NEW_ORDER_CAR_TYPE_COVERED = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(5) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+
+
+
+
+
+
+
+    CUSTOMER_NEW_ORDER_DOWNLOAD = (By.CSS_SELECTOR,"div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(6) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.dropdown-field > span.caret")
+    CUSTOMER_NEW_ORDER_DOWNLOAD_TWO = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[5]/checklist-dropdown[1]/div[1]/div[1]/span[2]")
+    CUSTOMER_NEW_ORDER_DOWNLOAD_BACK = (By.CSS_SELECTOR,"div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__load-params:nth-child(1) div.freight-form__field.ng-scope:nth-child(6) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(3) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_DOWNLOAD_UP = (By.CSS_SELECTOR,"div.freight-form__field.ng-scope:nth-child(6) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox > label:nth-child(2)")
+    CUSTOMER_NEW_ORDER_DOWNLOAD_FULL = (By.CSS_SELECTOR,"div.freight-form__field.ng-scope:nth-child(6) checklist-dropdown.freight-form__field-control.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty.invalid-model div.checklist-dropdown div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox > label:nth-child(2)")
+    CUSTOMER_NEW_ORDER_DOWNLOAD_GATE = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[5]/checklist-dropdown[1]/div[1]/div[2]/div[1]/div[5]/p[1]/label[1]/span[1]")
+
+    CUSTOMER_NEW_ORDER_TYPE = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[4]/checklist-dropdown[1]/div[1]/div[1]/span[2]")
+    CUSTOMER_NEW_ORDER_TYPE_FOR_CITIES = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[4]/checklist-dropdown[1]/div[1]/div[2]/div[1]/div[1]/p[1]/label[1]/span[1]")
+    CUSTOMER_NEW_ORDER_TYPE_ALL = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[4]/checklist-dropdown[1]/div[1]/div[2]/div[1]/div[1]/p[1]/label[1]/span[1]")
+    CUSTOMER_NEW_ORDER_TYPE_TENT = (By.CSS_SELECTOR,"div.checklist-dropdown div.list div.items div.item.ng-scope.lvl2:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_TYPE_BLIND = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl2:nth-child(4) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PRISE = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]/div[1]/div[1]/input[1]")
+    CUSTOMER_NEW_ORDER_PRISE_ALERT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[2]/input[1]")
+    CUSTOMER_NEW_ORDER_ALERT_PRISE_AGREE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div.modal-body.after > div > div > button")
+    CUSTOMER_NEW_ORDER_PRISE_TYPE = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[1]/div[1]/p[1]")
+    CUSTOMER_NEW_ORDER_PRISE_MOMENT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]/div[2]/div[4]/div[1]/div[1]/div[1]/p[1]")
+    CUSTOMER_NEW_ORDER_SEE_THE_CAR = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope div.order-footer > button.green.default.saveStep")
+    CUSTOMER_NEW_ORDER_CANSEL = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope div.order-footer div.cancel-order > a.cancel")
+    CUSTOMER_NEW_ORDER_REVIEWS = (By.CSS_SELECTOR,"div.left p:nth-child(1) > a.vars:nth-child(1)")
+    CUSTOMER_NEW_ORDER_SEE_THE_PEISES = (By.CSS_SELECTOR,"div.left p:nth-child(1) > a.vars.ng-scope:nth-child(2)")
+    CUSTOMER_NEW_ORDER_BUTTON_AGREE = (By.CSS_SELECTOR,"div.make-order-wrap.add-freight.new-make-order.ng-scope div.wrapper-steps.ng-scope div.order-footer > button.green.default.saveStep")
+    CUSTOMER_NEW_ORDER_AGREE = (By.CSS_SELECTOR,"div.left p:nth-child(1) > a.vars:nth-child(4)")
+    CUSTOMER_NEW_ORDER_TRANSPORTICA = (By.CSS_SELECTOR,"div.right p:nth-child(1) > a.vars.fs15:nth-child(2)")
+    CUSTOMER_NEW_ORDER_BACK = (By.CSS_SELECTOR,"div.wrapper-steps.ng-scope > a.global-back.vars")
+    CUSTOMER_NEW_ORDER_CAR_ALERT = (By.CSS_SELECTOR,"div.transport-item.ng-scope div.choose-buttons.ng-scope > button.vars.green.ng-scope")
+    CUSTOMER_NEW_ORDER_CAR_ALERT_TEXT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/p[2]/span[1]")
+    CUSTOMER_NEW_ORDER_CAR_ALERT_CANCEL = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]")
+    CUSTOMER_NEW_ORDER_ALERT_NO_CAR = (By.CSS_SELECTOR,"body.modal-open:nth-child(2) div.modal.fade.ng-scope.ng-isolate-scope.in:nth-child(1) div.modal-dialog div.modal-content div.additional-info-modal.select-transport-modal.ng-scope div:nth-child(1) div.no-transports:nth-child(5) > p.l1:nth-child(2)")
+
+
+    CUSTOMER_NEW_ORDER_ADDITIONAL = (By.CSS_SELECTOR,"div.freight-form__field.ng-scope:nth-child(7) label.freight-form__field-label > a.vars")
+    CUSTOMER_NEW_ORDER_PALET = (By.CSS_SELECTOR,"div.pallets-block div.pallets-block__main p.custom-checkbox label:nth-child(2) > span.outbox.bold.ng-binding")
+    CUSTOMER_NEW_ORDER_PALET_WIDTH = (By.CSS_SELECTOR,"div.pallets-size:nth-child(2) > input.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty.invalid-model")
+    CUSTOMER_NEW_ORDER_PALET_HIDHT = (By.CSS_SELECTOR,"div.pallets-size:nth-child(1) > input.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty.invalid-model")
+    CUSTOMER_NEW_ORDER_VOLUME = (By.CSS_SELECTOR,"#cargoVolume")
+    CUSTOMER_NEW_ORDER_PALET_EURO = (By.CSS_SELECTOR,"div.custom-radio:nth-child(2) label:nth-child(2) > div.radio-button")
+    CUSTOMER_NEW_ORDER_PALET_AGREE = (By.CSS_SELECTOR,"div.additional-info-modal.pallets-modal.ng-scope div.white div.fields:nth-child(3) div.button-wrapper:nth-child(3) > button.default.dark-gray")
+    CUSTOMER_NEW_ORDER_ACCOMPANIMENT = (By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[6]/td[1]/p[1]/label[1]/span[1]")
+    CUSTOMER_NEW_ORDER_ACCOMPANIMENT_NAME = (By.CSS_SELECTOR,"#expeditorName")
+    CUSTOMER_NEW_ORDER_ACCOMPANIMENT_PHONE = (By.CSS_SELECTOR,"#expeditorPhone")
+    CUSTOMER_NEW_ORDER_TEMPERATURE = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(7) > td > p > label > span")
+    CUSTOMER_NEW_ORDER_TEMPERATURE_INPUT = (By.CSS_SELECTOR,"#temperature")
+    CUSTOMER_NEW_ORDER_BELTS = (By.CSS_SELECTOR,"body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(8) > td > p > label > span")
+    CUSTOMER_NEW_ORDER_BELTS_INPUT = (By.CSS_SELECTOR,"#belts")
+
+    CUSTOMER_NEW_ORDER_PERMITS = (By.CSS_SELECTOR,"div.additional-info-modal.ng-scope div.white table.additional-info.uk:nth-child(3) tr:nth-child(9) td:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox")
+    CUSTOMER_NEW_ORDER_PERMITS_INPUT = (By.CSS_SELECTOR,"div.additional-info-modal.ng-scope div.white table.additional-info.uk:nth-child(3) td.permissions.ng-scope:nth-child(2) checklist-dropdown.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.checklist-dropdown div.dropdown-field > span.caret")
+    CUSTOMER_NEW_ORDER_PERMITS_CMR = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_TIR = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_T1 = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(3) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_T2 = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(4) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR1 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(5) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR2 = (By.CSS_SELECTOR,"div.list div.items div.item.ng-scope.lvl1:nth-child(6) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR3 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(7) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR4 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(8) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR5 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(9) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR6 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(10) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR7 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(11) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR8 = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(12) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_ADR9 = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(13) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_EKMT = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(14) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_SANPASS = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(15) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_SANBOOK = (By.CSS_SELECTOR,"div.items div.item.ng-scope.lvl1:nth-child(16) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_CUSTOMS_CERTIFICATE = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(17) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_PERMITS_CUSTOMS_CONTROL = (By.CSS_SELECTOR,"div.item.ng-scope.lvl1:nth-child(18) p.custom-checkbox label:nth-child(2) > span.outbox.ng-binding")
+    CUSTOMER_NEW_ORDER_WOODEN_FLOOR = (By.CSS_SELECTOR, "body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > div > div > table > tbody > tr:nth-child(10) > td:nth-child(1) > p > label > span" )
+
+    CUSTOMER_NEW_ORDER_BOARD = (By.CSS_SELECTOR,"div.additional-info-modal.ng-scope div.white table.additional-info.uk:nth-child(3) tr:nth-child(10) td:nth-child(2) p.custom-checkbox label:nth-child(2) > span.outbox")
+    CUSTOMER_NEW_ORDER_COMMENTS = (By.CSS_SELECTOR,"div.additional-info-modal.ng-scope div.white div.note:nth-child(4) > textarea.ng-pristine.ng-untouched.ng-valid.ng-empty")
+    CUSTOMER_NEW_ORDER_ADDITIONAL_AGREE = (By.CSS_SELECTOR,"div.additional-info-modal.ng-scope div.white > button.btn.btn-default.next.submit:nth-child(5)")
+
+    CUSTOMER_NEW_ORDER_PRICE_REQUEST = (By.CSS_SELECTOR,"div.freight-form__block.freight-form__payment-block:nth-child(2) div.freight-form__block-header:nth-child(1) div:nth-child(1) p.custom-checkbox.blue.freight-form__field-label label:nth-child(2) > span.outbox")
+
+    CUSTOMER_NEW_ORDER_CURRENSY = (By.CSS_SELECTOR,"div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.freight-form__blocks-group div.freight-form__block.freight-form__payment-block:nth-child(2) div.freight-form__field.without-height:nth-child(2) div.freight-form__field--new-fracht div.fracht-wrapper dropdown-one.currency-list.new-list.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.dropdown-one div.dropdown-field > span.caret")
+    CUSTOMER_NEW_ORDER_EURO = (By.CSS_SELECTOR,"div.item.ng-scope:nth-child(1) > p.ng-binding")
+    CUSTOMER_NEW_ORDER_USD = (By.CSS_SELECTOR,"div.item.ng-scope:nth-child(8) > p.ng-binding")
+    CUSTOMER_NEW_ORDER_VND = (By.CSS_SELECTOR,"div.freight-form__field.without-height:nth-child(2) div.freight-form__field--new-fracht div.fracht-wrapper dropdown-one.currency-list.new-list.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-not-empty div.dropdown-one div.list div.items.ng-isolate-scope.mCustomScrollbar._mCS_38.mCS-autoHide div.mCustomScrollBox.mCS-minimal-dark.mCSB_vertical_horizontal.mCSB_outside div.mCSB_container.mCS_x_hidden.mCS_no_scrollbar_x div.item.ng-scope:nth-child(132) > p.ng-binding")
+    CUSTOMER_NEW_ORDER_UAH = (By.XPATH,"//p[contains(text(),'UAH')]")
+
+    CUSTOMER_NEW_ORDER_TYPE_OF_PAY = (By.CSS_SELECTOR,"div.freight-form__field:nth-child(3) div.freight-form__field-control div.dropdown-cust div.inp > span.caret")
+    CUSTOMER_NEW_ORDER_CARD = (By.CSS_SELECTOR,"#cash_card")
+    CUSTOMER_NEW_ORDER_CASHLESS = (By.CSS_SELECTOR,"#cashless")
+    CUSTOMER_NEW_ORDER_CASH = (By.CSS_SELECTOR,"#cash")
+    CUSTOMER_NEW_ORDER_VAT = (By.CSS_SELECTOR,"#cashless_vat")
+
+    CUSTOMER_NEW_ORDER_PAY_ADDITIONAL = (By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/div/div/div/div/div[2]/div/div[3]/div[2]/div[4]/label/a")
+    CUSTOMER_NEW_ORDER_PAY_MOMENT = (By.CSS_SELECTOR,"#payment-moment > p")
+    CUSTOMER_NEW_ORDER_PREPAYMENT = (By.CSS_SELECTOR,"#prepayment")
+    CUSTOMER_NEW_ORDER_PREPAYMENT_PROCENT = (By.CSS_SELECTOR,"#paymentInfo")
+    CUSTOMER_NEW_ORDER_AT_UNLOADING = (By.CSS_SELECTOR,"#at_unloading")
+    CUSTOMER_NEW_ORDER_AT_LOADING = (By.CSS_SELECTOR,"#at_loading")
+    CUSTOMER_NEW_ORDER_ALERT_AGREE = (By.CSS_SELECTOR,"div.additional-info-modal.additional-info-modal--payment-modal.ng-scope div.white > button.btn.btn-default.next.submit:nth-child(4)")
+    CUSTOMER_NEW_ORDER_AGREE_ORDER = (By.CSS_SELECTOR,"div.order-section__order-container div.freight-form div.bottom-order > button.green.default.saveStep")
+    CUSTOMER_NEW_ORDER_AGREE_ORDER_BAD_ALERT = (By.CSS_SELECTOR,"div.modal-wrapper.normal.ng-scope div.white div.modal-footer:nth-child(4) > button.btn.btn-default.next")
+    CUSTOMER_NEW_ORDER_AGREE_ORDER_BAD_ALERT_TXT = (By.CSS_SELECTOR,"div.modal-wrapper.normal.ng-scope div.white > h2.center.ng-binding:nth-child(2)")####не вдалося розмістити замовлення
+    CUSTOMER_NEW_ORDER_AGREE_TEXT= (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope div.wrapper.ng-scope > h1.bold:nth-child(2)")##Замовлення успешно розміщено
+    CUSTOMER_NEW_ORDER_AGREE_ALERT_NEW_ORDER = (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope div.wrapper.ng-scope > a.vars.link:nth-child(4)")
+    CUSTOMER_NEW_ORDER_AGREE_ALERT_CANCEL= (By.CSS_SELECTOR,"div.customModal.new.infoWithImg.ng-scope > button.close")
+    CUSTOMER_NEW_ORDER_CANCEL_ORDER= (By.CSS_SELECTOR,"div.order-info-realtime.ng-scope div.order-realtime-wrapper.ng-scope div.header div.right > a.vars.red.ng-scope:nth-child(2)")
+    CUSTOMER_NEW_ORDER_CANCEL_ALERT_AGREE = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modal-footer > button.blue.ng-binding:nth-child(2)") 
+    CUSTOMER_NEW_ORDER_CANCEL_ALERT_CANCEL = (By.CSS_SELECTOR,"div.order-info-realtime.ng-scope div.order-realtime-wrapper.ng-scope div.header div.right > a.vars.red.ng-scope:nth-child(2)")
+    CUSTOMER_NEW_ORDER_CANCEL_ALERT_CANCEL_TXT = (By.CSS_SELECTOR," div.customModal.info.ng-scope div.modalContent > h3.ng-binding:nth-child(3)")###Заявку скасовано.
+    CUSTOMER_NEW_ORDER_CANCEL_ALERT_CLOSE = (By.CSS_SELECTOR,"div.customModal.prompt.ng-scope div.modal-footer > a:nth-child(1)")
+    CUSTOMER_NEW_ORDER_COPY = (By.CSS_SELECTOR,"div.order-info-realtime.ng-scope div.order-realtime-wrapper.ng-scope div.header div.right > a.vars.ng-scope:nth-child(1)")
+    CUSTOMER_NEW_ORDER_NO_COLUMN_TXT = (By.CSS_SELECTOR,"div.inner-view.ng-scope div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope > p.make-order-error")##Заповніть всі обов'язкові поля
+    CUSTOMER_NEW_ORDER_COPY_IN_NEW = (By.CSS_SELECTOR,"div.order-info-realtime.ng-scope div.order-realtime-wrapper.ng-scope div.header div.right > a.vars.ng-scope:nth-child(1)")
+    CUSTOMER_NEW_ORDER_AGREE_BACK = (By.CSS_SELECTOR,"div.order-info-realtime.ng-scope div.order-realtime-wrapper.ng-scope div.header div.left div:nth-child(1) > a.vars.ng-scope")
+
+    CUSTOMER_NEW_ORDER_REGULAR = (By.CSS_SELECTOR,"div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.date-part div.order-date-fields p.custom-checkbox.blue.freight-form__field-label.ng-scope label:nth-child(2) > span.outbox")
+    CUSTOMER_NEW_ORDER_REGULAR_MON = (By.CSS_SELECTOR,"div.regular-settings__wrapper:nth-child(3) div.regular-settings__content div.content__trip div.content__days p.custom-checkbox-bottom.ng-scope:nth-child(1) > label:nth-child(2)")
+    CUSTOMER_NEW_ORDER_REGULAR_SUN = (By.CSS_SELECTOR,"div.regular-settings__wrapper:nth-child(3) div.regular-settings__content div.content__trip div.content__days p.custom-checkbox-bottom.ng-scope:nth-child(7) > label:nth-child(2)")
+    CUSTOMER_NEW_ORDER_REGULAR_SETINGS = (By.CSS_SELECTOR,"div.height-100.ng-scope div.inner-view.ng-scope div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope div.order-section__order-container div.freight-form div.date-part div.order-date-fields div.regular-dates.ng-scope > a.vars:nth-child(1)")
+    CUSTOMER_NEW_ORDER_REGULAR_AGREE = (By.CSS_SELECTOR,"div.customModal.regular-settings.ng-scope div.regular-settings__wrapper:nth-child(3) div.button-wrapper > button.green")
+    
+    CUSTOMER_NEW_ORDER_CALENDAR_FROM = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]")
+    CUSTOMER_NEW_ORDER_CALENDAR_FROM_DATE = (By.CSS_SELECTOR,"#ui-datepicker-div > table > tbody > tr:nth-child(4) > td:nth-child(3) > a")
+    CUSTOMER_NEW_ORDER_CALENDSR_TO = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[2]")
+    CUSTOMER_NEW_ORDER_CALENDSR_TO_MONTH = (By.CSS_SELECTOR,"div.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all a.ui-datepicker-next.ui-corner-all > span.ui-icon.ui-icon-circle-triangle-e")
+    CUSTOMER_NEW_ORDER_CALENDSR_TO_DATE = (By.CSS_SELECTOR,"#ui-datepicker-div > table > tbody > tr:nth-child(2) > td:nth-child(5) > a")
+    
+#######MY ORDERS ################
+
+    CUSTOMER_MY_ORDER = (By.CSS_SELECTOR,"#orders-link")
+    CUSTOMER_MY_ORDER_BACK_ORDER = (By.CSS_SELECTOR,"div.order-info-realtime.ng-scope div.order-realtime-wrapper.ng-scope div.header div.left div:nth-child(1) > a.vars.ng-scope")
+    CUSTOMER_MY_ORDER_BACK_NEW_ORDER = (By.CSS_SELECTOR,"div.inner-view.ng-scope div.add-freight.grey-bg.new-make-order div.ng-scope div.wrapper-steps.ng-scope > a.global-back.vars.ng-scope")
+
+    CUSTOMER_MY_ORDER_SEARCH_A_DRIVER = (By.CSS_SELECTOR,"body > div.application.uk.ng-scope.light-blue-background > div.cabinet.ng-scope > div.container > div > div > div.orders-header > div.statuses.ng-pristine.ng-untouched.ng-valid.ng-not-empty > span:nth-child(1)")
+    CUSTOMER_MY_ORDER_SEARCH_A_DRIVER_TXT = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) > td.status:nth-child(4)")##Пошук водія
+    CUSTOMER_MY_ORDER_SEARCH_A_DRIVER_INFO = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) td.pointer.center:nth-child(7) > span.glyphicon.glyphicon-menu-right")
+    CUSTOMER_MY_ORDER_SEARCH_A_DRIVER_COPY_IN_NEW = (By.CSS_SELECTOR,"div.company-table tr.ng-scope:nth-child(1) td:nth-child(6) div.flex-inner-fracht span.copy-from-tabs > span.ng-scope")
+    CUSTOMER_MY_ORDER_SEARCH_A_DRIVER_MAP = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) td.td-pin:nth-child(3) > div.point-pin")
+    CUSTOMER_MY_ORDER_SEARCH_A_DRIVER_MAP_BACK = (By.CSS_SELECTOR,"div.ng-scope.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom > div.map-close.ng-scope")
+
+
+
+    CUSTOMER_MY_ORDER_IN_WORK = (By.CSS_SELECTOR,"div.statuses.ng-pristine.ng-untouched.ng-valid.ng-not-empty:nth-child(3) > span.statuses-span.ng-binding:nth-child(2)")
+
+    
+    CUSTOMER_MY_ORDER_END_WORK = (By.CSS_SELECTOR,"div.statuses.ng-pristine.ng-untouched.ng-valid.ng-not-empty:nth-child(3) > span.statuses-span.ng-binding:nth-child(3)")
+    CUSTOMER_MY_ORDER_END_WORK_TXT = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) > td.status.negotiation:nth-child(4)")##Виконано
+    CUSTOMER_MY_ORDER_END_WORK_INFO = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) td.pointer.center:nth-child(7) > span.glyphicon.glyphicon-menu-right")
+    CUSTOMER_MY_ORDER_END_WORK_COPY_IN_NEW = (By.CSS_SELECTOR,"div.company-table tr.ng-scope:nth-child(1) td:nth-child(6) div.flex-inner-fracht span.copy-from-tabs > span.ng-scope")
+    CUSTOMER_MY_ORDER_END_WORK_MAP = (By.CSS_SELECTOR,"div.company-table tbody:nth-child(2) tr.ng-scope:nth-child(1) td.td-pin:nth-child(3) div.point-pin > img.point")
+    CUSTOMER_MY_ORDER_END_WORK_MAP_BACK = (By.CSS_SELECTOR,"div.ng-scope.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom > div.map-close.ng-scope")
+
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_AGREE = (By.CSS_SELECTOR,"#update-filter")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_CLEAR = (By.CSS_SELECTOR,"div.filter-wrapper > span.clear-filter")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_NAME_CARGO = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[1]/input[1]")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_NAME_CARGO_TXT = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/table[1]/tbody[1]/tr[1]/td[1]/p[1]/span[1]")##47348
+
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_FROM_CONTRY = (By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/div/div[2]/ul/li[2]/div[1]/div/span")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_FROM_CONTRY_FOCUS = (By.CSS_SELECTOR,"#focusOnClick")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_FROM_CONTRY_AGREE = (By.CSS_SELECTOR,"#mCSB_70_container > li:nth-child(172)")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_FROM = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div/div[2]/ul/li[2]/input")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_FROM_ODESA = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div/div[2]/ul/li[2]/div[2]/div/ul/li[2]/span")
+
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_WHERE = (By.XPATH,"xpath//html/body/div[1]/div[2]/div[2]/div/div/div[2]/ul/li[3]/input")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_WHERE_RIG = (By.XPATH,"xpath//html/body/div[1]/div[2]/div[2]/div/div/div[2]/ul/li[3]/div[2]/div/ul/li[1]")
+
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_DATE_IN = (By.CSS_SELECTOR,"#dp1673645797926")
+    CUSTOMER_MY_ORDER_END_WORK_FILTR_DATE_TO = (By.CSS_SELECTOR,"#dp1673645797927")
+    
+    CUSTOMER_MY_ORDER_CANCELED = (By.CSS_SELECTOR," div.orders-header div.statuses.ng-pristine.ng-untouched.ng-valid.ng-not-empty:nth-child(3) > span.statuses-span.ng-binding:nth-child(4)")
+    CUSTOMER_MY_ORDER_CANCELED_TXT = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) > td.status:nth-child(4)")##Скасовано
+    CUSTOMER_MY_ORDER_CANCELED_INFO = (By.CSS_SELECTOR,"div.company-table table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) td.pointer.center:nth-child(7) > span.glyphicon.glyphicon-menu-right")
+    CUSTOMER_MY_ORDER_CANCELED_COPY_IN_NEW = (By.CSS_SELECTOR,"div.company-table tr.ng-scope:nth-child(1) td:nth-child(6) div.flex-inner-fracht span.copy-from-tabs > span.ng-scope")
+    CUSTOMER_MY_ORDER_CANCELED_MAP = (By.CSS_SELECTOR,"div.company-table tbody:nth-child(2) tr.ng-scope:nth-child(1) td.td-pin:nth-child(3) div.point-pin > img.point")
+    CUSTOMER_MY_ORDER_CANCELED_MAP_BACK = (By.CSS_SELECTOR,"div.ng-scope.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom > div.map-close.ng-scope")
+
+
+    CUSTOMER_CALCULATION_ROAD = (By.CSS_SELECTOR,"#route-link")
+
+    CUSTOMER_CALCULATION_ROAD_FROM = (By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/div[1]/div[2]/div[5]/div[1]/div[1]/div/input")
+    CUSTOMER_CALCULATION_ROAD_FROM_ODESA = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[1]/div/div[2]/div[1]/ul/li[2]/span")##Оде
+
+    CUSTOMER_CALCULATION_ROAD_WHERE = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[2]/div/input")
+    CUSTOMER_CALCULATION_ROAD_WHERE_EMPTY_FOR = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/div[2]/div[1]/input[1]")
+    CUSTOMER_CALCULATION_ROAD_WHERE_KIYV = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[2]/div/div[2]/div[1]/ul/li[1]")## К
+
+    CUSTOMER_CALCULATION_ROAD_TONAGE = (By.CSS_SELECTOR,"div.tonnage:nth-child(3) div:nth-child(2) > input.form-control.ym-record-keys.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty")
+    CUSTOMER_CALCULATION_ROAD_TONAGE_FOR_SITIES = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/div[6]/div[1]/input[1]")
+    
+    CUSTOMER_CALCULATION_ROAD_TYPE_FOR_PAY = (By.CSS_SELECTOR,"div.dropdown-cust:nth-child(2) div.inp > span.glyphicon.glyphicon-menu-right")
+    CUSTOMER_CALCULATION_ROAD_CARD = (By.CSS_SELECTOR,"#cash_card")
+    CUSTOMER_CALCULATION_ROAD_CASH = (By.CSS_SELECTOR,"#cash")
+    CUSTOMER_CALCULATION_ROAD_CASHLESS = (By.CSS_SELECTOR,"#cashless")
+    CUSTOMER_CALCULATION_ROAD_CASHLESS_VAT = (By.CSS_SELECTOR,"#cashless_vat")
+    
+    CUSTOMER_CALCULATION_ROAD_GR_KM = (By.CSS_SELECTOR,"div.points div.route-fracht-type:nth-child(5) p.custom-radiobutton:nth-child(2) > label:nth-child(2)")
+    CUSTOMER_CALCULATION_ROAD_GR_TON = (By.CSS_SELECTOR,"div.points div.route-fracht-type:nth-child(5) p.custom-radiobutton:nth-child(3) > label:nth-child(2)")
+    CUSTOMER_CALCULATION_ROAD_GR = (By.CSS_SELECTOR,"div.points div.route-fracht-type:nth-child(5) p.custom-radiobutton:nth-child(1) > label:nth-child(2)")
+    
+    CUSTOMER_CALCULATION_ROAD_AGREE = (By.CSS_SELECTOR,"div.route.ng-scope:nth-child(1) div.main div.main-body.ng-scope div.points > button.landing-green:nth-child(6)")
+    CUSTOMER_CALCULATION_ROAD_AGREE_FOR_CITIES = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[5]/div[1]/button[1]")
+    CUSTOMER_CALCULATION_ROAD_AGREE_TXT = (By.CSS_SELECTOR,"div.route-item:nth-child(1) table:nth-child(1) tbody:nth-child(1) tr:nth-child(1) td:nth-child(2) > b.ng-binding")##476 км
+    CUSTOMER_CALCULATION_ROAD_AGREE_ORDER = (By.CSS_SELECTOR,"div.route.ng-scope:nth-child(1) div.main div.ng-scope:nth-child(6) div.button-wrapper > button.landing-green.red")
+
+    CUSTOMER_CALCULATION_ROAD_FROM_ADD_NEW = (By.CSS_SELECTOR,"body > div.application.uk.ng-scope.light-blue-background > div.cabinet.ng-scope > div.container > div > div.route.ng-scope > div.main > div.main-body.ng-scope > div.points > div:nth-child(1) > a")
+
+    CUSTOMER_CALCULATION_ROAD_FROM_NEW_ONE = (By.CSS_SELECTOR,"div.container div.height-100.ng-scope div.route.ng-scope:nth-child(1) div.main div.main-body.ng-scope div.points div.point.ng-scope:nth-child(2) div:nth-child(2) > input.form-control.autocity-new.to.ym-record-keys.ng-valid.ng-isolate-scope.ng-dirty.ng-touched.ng-empty")
+    CUSTOMER_CALCULATION_ROAD_MELITOPOL = (By.CSS_SELECTOR,"div.route.ng-scope > div.main > div.main-body.ng-scope > div.points > div:nth-child(2) > div > div.new-autocomplete.new-autocomplete--visible > div.items > ul > li:nth-child(2) > span")##м
+    
+    CUSTOMER_CALCULATION_ROAD_FROM_NEW_TWO = (By.CSS_SELECTOR,"div.height-100.ng-scope div.route.ng-scope:nth-child(1) div.main div.main-body.ng-scope div.points div.point.ng-scope:nth-child(2) div:nth-child(2) > input.form-control.autocity-new.to.ym-record-keys.ng-valid.ng-isolate-scope.ng-dirty.ng-touched.ng-empty")
+    CUSTOMER_CALCULATION_ROAD_DNIPRO = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[2]/div/div[2]/div[1]/ul/li[1]/span")##Д
+    
+    CUSTOMER_CALCULATION_ROAD_WHERE_ADD_NEW = (By.CSS_SELECTOR,"div.route.ng-scope:nth-child(1) div.main div.main-body.ng-scope div.points div.point.ng-scope:nth-child(3) > a:nth-child(3)")
+    
+    CUSTOMER_CALCULATION_ROAD_WHERE_NEW_ONE = (By.CSS_SELECTOR,"div.height-100.ng-scope div.route.ng-scope:nth-child(1) div.main div.main-body.ng-scope div.points div.point.ng-scope:nth-child(4) div:nth-child(2) > input.form-control.autocity-new.to.ym-record-keys.ng-pristine.ng-untouched.ng-valid.ng-isolate-scope.ng-empty")
+    CUSTOMER_CALCULATION_ROAD_WHERE_VUSHENKA = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[4]/div/div[2]/div[1]/ul/li[2]/span")##В
+    
+    CUSTOMER_CALCULATION_ROAD_WHERE_NEW_TWO = (By.CSS_SELECTOR,"div.container div.height-100.ng-scope div.route.ng-scope:nth-child(1) div.main div.main-body.ng-scope div.points div.point.ng-scope:nth-child(4) div:nth-child(2) > input.form-control.autocity-new.to.ym-record-keys.ng-valid.ng-isolate-scope.ng-dirty.ng-touched.ng-not-empty")
+    CUSTOMER_CALCULATION_ROAD_DERHAJI = (By.XPATH,"/html/body/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[5]/div[1]/div[4]/div/div[2]/div[1]/ul/li[3]/span")## Д
+
+########################################  FEEDBACK #######################################    
+
+    CUSTOMER_FEEDBACK = (By.CSS_SELECTOR,"#feedback-link")
+    CUSTOMER_FEEDBACK_MY = (By.CSS_SELECTOR,"div.content.ng-scope div.orders-header:nth-child(1) div.statuses.ng-pristine.ng-untouched.ng-valid.ng-not-empty > span.statuses-span.ng-binding:nth-child(1)")
+    CUSTOMER_FEEDBACK_MY_TXT = (By.CSS_SELECTOR,"div.content.ng-scope div.feedbacks:nth-child(4) div.comment-block.ng-scope p:nth-child(1) > span.gray")##Перевізник:
+    CUSTOMER_FEEDBACK_MY_EDIT = (By.CSS_SELECTOR,"div.height-100.ng-scope div.content.ng-scope div.feedbacks:nth-child(4) div.comment-block.ng-scope p:nth-child(1) span.pull-right.ng-scope > a:nth-child(1)")
+    CUSTOMER_FEEDBACK_MY_EDIT_INPUT = (By.CSS_SELECTOR,"div.customModal.info.ng-scope div.modalContent > textarea.ng-pristine.ng-untouched.ng-valid.ng-not-empty:nth-child(4)")
+    CUSTOMER_FEEDBACK_MY_EDIT_AGREE = (By.CSS_SELECTOR,"div.customModal.info.ng-scope div.modalContent > button.green.default:nth-child(5)")
+
+    CUSTOMER_FEEDBACK_ABOUT_MY = (By.CSS_SELECTOR,"div.height-100.ng-scope div.content.ng-scope div.orders-header:nth-child(1) div.statuses.ng-pristine.ng-untouched.ng-valid.ng-not-empty > span.statuses-span.ng-binding:nth-child(2)")
+    CUSTOMER_FEEDBACK_ABOUT_MY_TXT = (By.CSS_SELECTOR,"div.height-100.ng-scope div.content.ng-scope div.feedbacks:nth-child(4) div.comment-block.ng-scope:nth-child(1) p:nth-child(1) > span.bold.ng-binding")##Света
+    
+##################################      MY PROFILE #######################
+
+    CUSTOMER_PROFILE = (By.CSS_SELECTOR,"#profile-link")
+    CUSTOMER_PROFILE_TXT = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.profile-info:nth-child(4) table:nth-child(1) tbody:nth-child(1) tr:nth-child(3) > td.ng-binding:nth-child(2)")##+38(045)678-97-65
+    CUSTOMER_PROFILE_EDIT = (By.CSS_SELECTOR,"#edit-button")
+    CUSTOMER_PROFILE_EDIT_NAME = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.profile-info.ng-scope:nth-child(6) table:nth-child(1) tbody:nth-child(1) tr:nth-child(1) td:nth-child(2) > input.form-control.ng-pristine.ng-untouched.ng-valid.ng-not-empty")
+    CUSTOMER_PROFILE_EDIT_COMPANY = (By.CSS_SELECTOR,"#company-field")
+    CUSTOMER_PROFILE_EDIT_PHONE = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.profile-info.ng-scope:nth-child(6) table:nth-child(1) tbody:nth-child(1) tr:nth-child(4) td:nth-child(2) > a.pull-right")
+    CUSTOMER_PROFILE_EDIT_PASS = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.profile-info.ng-scope:nth-child(6) table:nth-child(1) tbody:nth-child(1) tr:nth-child(5) td:nth-child(2) > a.pull-right")
+    CUSTOMER_PROFILE_EDIT_SAVE = (By.CSS_SELECTOR,"#save-button")
+
+    CUSTOMER_PROFILE_SETING = (By.CSS_SELECTOR,"html > body > div.application.uk.ng-scope.light-blue-background > div.cabinet.ng-scope > div.container > div > div.profile-settings.ng-scope > div.hat > div.pull-right > a:nth-child(3)")
+    CUSTOMER_PROFILE_SETING_MAIL = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.profile-info:nth-child(5) tr:nth-child(1) td:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox")
+    CUSTOMER_PROFILE_SETING_MESSAGE = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.profile-info:nth-child(5) tr:nth-child(2) td:nth-child(1) p.custom-checkbox label:nth-child(2) > span.outbox")
+    CUSTOMER_PROFILE_SETING_FEDDBACK = (By.XPATH,"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[4]/table[2]/tbody[1]/tr[1]/td[1]/p[1]/label[1]/span[1]")
+    CUSTOMER_PROFILE_SETING_SAVE = (By.CSS_SELECTOR,"#save-button")
+
+
+    CUSTOMER_PROFILE_STATISTIC = (By.CSS_SELECTOR,"#profile-link")
+    CUSTOMER_PROFILE_STATISTIC_MONTH = (By.CSS_SELECTOR,"div.chart-wrapper:nth-child(2) div.chart-header div.chart-filter:nth-child(2) p.custom-radiobutton:nth-child(1) > label:nth-child(2)")
+    CUSTOMER_PROFILE_STATISTIC_QUARTER = (By.CSS_SELECTOR,"div.chart-wrapper:nth-child(2) div.chart-header div.chart-filter:nth-child(2) p.custom-radiobutton:nth-child(2) > label:nth-child(2)")
+    CUSTOMER_PROFILE_STATISTIC_YEAR = (By.CSS_SELECTOR,"div.container.statistic-container.ng-scope div.statistics div.chart-wrapper:nth-child(2) div.chart-header div.chart-filter:nth-child(2) p.custom-radiobutton:nth-child(2) > label:nth-child(2)")
+    
+    CUSTOMER_PROFILE_STATISTIC_CARGO = (By.CSS_SELECTOR,"div.container.statistic-container.ng-scope div.statistics ul.chart-controller:nth-child(3) li.active:nth-child(1) > h3.ng-binding:nth-child(2)")
+    CUSTOMER_PROFILE_STATISTIC_TONAGE = (By.CSS_SELECTOR,"div.container.statistic-container.ng-scope div.statistics ul.chart-controller:nth-child(3) li:nth-child(2) > h3.ng-binding:nth-child(2)")
+    CUSTOMER_PROFILE_STATISTIC_COSTS = (By.CSS_SELECTOR,"div.container.statistic-container.ng-scope div.statistics ul.chart-controller:nth-child(3) li:nth-child(3) > h3.ng-binding:nth-child(2)")
+    CUSTOMER_PROFILE_STATISTIC_DRIVER_TXT = (By.CSS_SELECTOR,"div.ng-scope:nth-child(4) div.company-table.ng-scope table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) > td.ng-binding:nth-child(2)")
+    CUSTOMER_PROFILE_STATISTIC_DRIVER_ORDER = (By.CSS_SELECTOR,"div.company-table.ng-scope table:nth-child(1) tbody:nth-child(2) tr.ng-scope:nth-child(1) td.pointer.center:nth-child(6) > span.glyphicon.glyphicon-menu-right")
+
+
+    CUSTOMER_MESSAGES = (By.CSS_SELECTOR,"div.links:nth-child(3) a:nth-child(7) div.notification-item > img.ng-scope")
+    CUSTOMER_MESSAGES_SETING = (By.CSS_SELECTOR,"#settings")
+    CUSTOMER_MESSAGES_SETING_TXT = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.hat:nth-child(2) div.pull-left > h3:nth-child(2)")
+    CUSTOMER_MESSAGES_SETING_BACK = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div:nth-child(1) > a:nth-child(1)")
+    CUSTOMER_MESSAGES_SETING_TXT_TWO = (By.CSS_SELECTOR,"div.profile-settings.ng-scope div.hat:nth-child(2) div.pull-left > h3:nth-child(1)")
+
+    CUSTOMER_SUPPORT = (By.CSS_SELECTOR,"div:nth-child(1) > button.support-button")
+    CUSTOMER_SUPPORT_TXT = (By.CSS_SELECTOR,"div.modal-wrapper.normal.ng-scope div.white > p.center.description:nth-child(2)")
+
+    CUSTOMER_EXIT = (By.CSS_SELECTOR,"#logout-link")
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+     
 
 
 

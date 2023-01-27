@@ -13,6 +13,7 @@ link = "https://nextua.transportica.com/uk"
 
 class TestFooter():
 
+    @pytest.mark.footercarrier ##pytest -s -m footercarrier
     def test_carrier(self, browser):
         print("\ntest_carrier")
         try:
@@ -29,6 +30,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footercompany ##pytest -s -m footercompany
     def test_company(self, browser):
         print("\ntest_company")
         try:
@@ -45,6 +47,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footertarif ##pytest -s -m footertarif
     def test_tarif(self, browser):
         print("\ntest_tarif")
         try:
@@ -61,6 +64,8 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
         
+
+    @pytest.mark.footerdistance ##pytest -s -m footerdistance 
     def test_distance(self, browser):
         print("\ntest_distance")
         try:
@@ -77,6 +82,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footercoin ##pytest -s -m footercoin
     def test_coin(self, browser):
         print("\ntest_coin")
         try:
@@ -93,6 +99,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footerabout ##pytest -s -m footerabout
     def test_about(self, browser):
         print("\ntest_about")
         try:
@@ -109,6 +116,7 @@ class TestFooter():
         except NoSuchElementException:  
             pass 
 
+    @pytest.mark.footerpricecustomer ##pytest -s -m footerpricecustomer
     def test_price_customer(self, browser):
         print("\ntest_price_customer")
         try:
@@ -127,6 +135,7 @@ class TestFooter():
         except NoSuchElementException:  
             pass 
 
+    @pytest.mark.footerpriceshippers ##pytest -s -m footerpriceshippers
     def test_price_shippers(self, browser):
         print("\ntest_price_shippers")
         try:
@@ -145,6 +154,7 @@ class TestFooter():
         except NoSuchElementException:  
             pass 
 
+    @pytest.mark.footerquestion ##pytest -s -m footerquestion
     def test_question(self, browser):
         print("\ntest_question")
         try:
@@ -161,6 +171,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footersubmitapplication ##pytest -s -m footersubmitapplication
     def test_submit_application(self, browser):
         print("\ntest_submit_application")
         try:
@@ -179,6 +190,7 @@ class TestFooter():
 
     #################################          Q&A          ###################################
 
+    @pytest.mark.footerhowitwork ##pytest -s -m footerhowitwork
     def test_how_it_work(self, browser):
         print("\ntest_how_it_work")
         try:
@@ -199,6 +211,7 @@ class TestFooter():
         except NoSuchElementException:  
             pass 
 
+    @pytest.mark.footerchangepass ##pytest -s -m footerchangepass
     def test_change_pass(self, browser):
         print("\ntest_change_pass")
         try:
@@ -218,6 +231,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footerapliccation ##pytest -s -m footerapliccation
     def test_apliccation(self, browser):
         print("\ntest_application")
         try:
@@ -237,6 +251,7 @@ class TestFooter():
         except NoSuchElementException:  #spelling error making this code not work as expected
             pass 
 
+    @pytest.mark.footerihaveadriver ##pytest -s -m footerihaveadriver
     def test_I_have_a_driver(self, browser):
         print("\ntest_I_have_a_driver")
         try:
@@ -256,6 +271,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerownerofacarfleet ##pytest -s -m footerownerofacarfleet
     def test_owner_of_a_car_fleet(self, browser):
         print("\ntest_owner_of_a_car_fleet")
         try:
@@ -275,6 +291,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtosortorders ##pytest -s -m footerhowtosortorders
     def test_how_to_sort_orders(self, browser):
         print("\ntest_how_to_sort_orders")
         try:
@@ -294,6 +311,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footermoneyfordelivery ##pytest -s -m footermoneyfordelivery
     def test_money_for_delivery(self, browser):
         print("\ntest_for_delivery")
         try:
@@ -313,7 +331,8 @@ class TestFooter():
             page.browser.quit()
         except NoSuchElementException: 
             pass 
-
+    
+    @pytest.mark.footerpaymentmoment ##pytest -s -m footerpaymentmoment
     def test_payment_moment(self, browser):
         print("\ntest_payment_moment")
         try:
@@ -334,6 +353,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerwrongpoint ##pytest -s -m footerwrongpoint
     def test_wrong_point(self, browser):
         print("\ntest_wrong_point")
         try:
@@ -354,6 +374,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtoaddcar ##pytest -s -m footerhowtoaddcar
     def test_how_to_add_car(self, browser):
         print("\ntest_how_to_download_documents")
         try:
@@ -374,6 +395,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtotakeorder ##pytest -s -m footerhowtotakeorder
     def test_how_to_take_order(self, browser):
         print("\ntest_how_to_take_order")
         try:
@@ -394,6 +416,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtodownloadapp ##pytest -s -m footerhowtodownloadapp
     def test_how_to_download_app(self, browser):
         print("\ntest_how_to_download_app")
         try:
@@ -414,6 +437,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtodownloadapp ##pytest -s -m footerhowtodownloadapp
     def test_how_to_take_money(self, browser):
         print("\ntest_how_to_take_money")
         try:
@@ -434,6 +458,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowmakingprice ##pytest -s -m footerhowmakingprice
     def test_how_making_price(self, browser):
         print("\ntest_how_making_price")
         try:
@@ -454,6 +479,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtocancelorder ##pytest -s -m footerhowtocancelorder
     def test_how_to_cancel_order(self, browser):
         print("\ntest_how_to_cancel_order")
         try:
@@ -474,6 +500,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowtocalloperator ##pytest -s -m footerhowtocalloperator
     def test_how_to_call_operator(self, browser):
         print("\ntest_how_to_call_operator")
         try:
@@ -494,6 +521,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowitworkcustomer ##pytest -s -m footerhowitworkcustomer
     def test_how_it_work_customer(self, browser):
         print("\ntest_how_it_work_customer")
         try:
@@ -514,6 +542,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerhowservicepaymentcustomer ##pytest -s -m footerhowservicepaymentcustomer
     def test_how_service_payment_customer(self, browser):
         print("\ntest_how_service_payment_customer")
         try:
@@ -534,6 +563,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footercargoinformationcustomer ##pytest -s -m footercargoinformationcustomer
     def test_cargo_information_customer(self, browser):
         print("\ntest_cargo_information_customer")
         try:
@@ -552,6 +582,7 @@ class TestFooter():
         except NoSuchElementException: 
             pass 
 
+    @pytest.mark.footerwheretransportscustomer ##pytest -s -m footerwheretransportscustomer
     def test_where_transports_customer(self, browser):
         print("\ntest_where_transports_customer")
         try:
